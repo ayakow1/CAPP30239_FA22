@@ -3,4 +3,5 @@
 This is a repository for CAPP30239 Data Visualization for Policy Analysis in Fall 2022. Most of the codes are written in HTML/CSS/D3.js. 
 
 ## Contents
-`week_01`: Data selfie, Introduction to HTML/CSS/JS. 
+`week_01`: Data selfie, Introduction to HTML/CSS. 
+`week_02`: Topics in design, Introduction to JS. 
