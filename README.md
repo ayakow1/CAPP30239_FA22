@@ -4,4 +4,5 @@ This is a repository for CAPP30239 Data Visualization for Policy Analysis in Fal
 
 ## Contents
 `week_01`: Data selfie, Introduction to HTML/CSS. 
+
 `week_02`: Topics in design, Introduction to JS. 
