@@ -1,5 +1,5 @@
 # Data Colections
-This describes collecting data for the final project as a week2 assignment. I will focus on population concentration in Tokyo, one of the biggest concerns in Japan's economy. The overpopulation has caused a sizeable economic gap with other areas, increased the risk of disasters, including the COVID-19 pandemic, and contributed to the declining fertility rate. Although concentrating political, financial, and economic functions on the capital could have raised productivity, it is not sustainable. I would like to address this issue through data visualization and provide insights into why the population gap matters. 
+This describes collecting data for the final project as a week2 assignment. I will focus on population concentration in Tokyo, one of the biggest concerns in Japan's economy. The overpopulation has caused a sizeable economic gap with other areas, increased the risk of disasters, including the COVID-19 pandemic, and contributed to the declining fertility rate. Although concentrating political, financial, and economic functions on the capital could have raised productivity, it is not sustainable. This is a personal project to address this issue through data vizualization. 
 
 ## Data source: Title, Agency, Location, Link
 * `migration.csv` : Number of Net-migration by Age and Sex for Prefectures from [Report on Internal Migration in Japan](https://www.e-stat.go.jp/en/stat-search/files?page=1&layout=datalist&toukei=00200523&tstat=000000070001&cycle=7&year=20210&month=0&tclass1=000001148746&stat_infid=000032163826&result_back=1&tclass2val=0)
@@ -13,14 +13,14 @@ This describes collecting data for the final project as a week2 assignment. I wi
 These data are collected from national official statistics. 
 
 ## Why you are interested in this topic
-
+I often discussed this topic when I worked for the government. Obviously, the low fertility rate and aging population have critical impacts on Japan's economic growth, and the overpopulation in Tokyo is one of the driving forces to exacerbate this phenomenon. Data visualization can be a powerful tool to provoke discussion on why the overpopulation matters. 
 
 ## Thoughts on how you would hope to use this data
 | Data        | Type of visualization |
 | ----------- | ----------- |
 | migration   | streamgraph or chord diagram |
 | population density   | choropleth map or grid map  |
-| population distribution   | radial stacked bar chart |
+| population projection by age   | radial stacked bar chart |
 | fertility rate   | dot plot or line char |
 | economic features (TBD)  | scatter plot or bar chart  |
 
