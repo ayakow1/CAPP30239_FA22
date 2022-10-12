@@ -1,5 +1,5 @@
 # Data Colections
-This is a description for collecting data for final project as week2 assignment. 
+This describes collecting data for the final project as a week2 assignment. I will focus on population concentration in Tokyo, one of the biggest concerns in Japan's economy. The overpopulation has caused a sizeable economic gap with other areas, increased the risk of disasters, including the COVID-19 pandemic, and contributed to the declining fertility rate. Although concentrating political, financial, and economic functions on the capital could have raised productivity, it is not sustainable. I would like to address this issue through data visualization and provide insights into why the population gap matters. 
 
 ## Data source: Title, Agency, Location, Link
 * `migration.csv` : Number of Net-migration by Age and Sex for Prefectures from [Report on Internal Migration in Japan](https://www.e-stat.go.jp/en/stat-search/files?page=1&layout=datalist&toukei=00200523&tstat=000000070001&cycle=7&year=20210&month=0&tclass1=000001148746&stat_infid=000032163826&result_back=1&tclass2val=0)
@@ -10,12 +10,22 @@ This is a description for collecting data for final project as week2 assignment.
 * `prediction.csv` : Regional Population Projections for Japan: 2015–2045 from [The National Institute of Population and Social Security Research](https://www.ipss.go.jp/pp-shicyoson/j/shicyoson18/t-page.asp) 
 
 ## Description of data
+These data are collected from national official statistics. 
 
 ## Why you are interested in this topic
 
+
 ## Thoughts on how you would hope to use this data
+| Data        | Type of visualization |
+| ----------- | ----------- |
+| migration   | streamgraph or chord diagram |
+| population density   | choropleth map or grid map  |
+| population distribution   | radial stacked bar chart |
+| fertility rate   | dot plot or line char |
+| economic features (TBD)  | scatter plot or bar chart  |
 
 ## Potential data points
+I will use either prefecture level data (47 points) or municiple level data (1964 points). The prefecture level data is the primary focused but municiple data might be useful to create granular maps. 
 
 ## Any concerns about the data
 * Some Japanese may require translation to English.
