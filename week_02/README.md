@@ -10,10 +10,10 @@ This describes collecting data for the final project as a week2 assignment. I wi
 * `prediction.csv` : Regional Population Projections for Japan: 2015–2045 from [The National Institute of Population and Social Security Research](https://www.ipss.go.jp/pp-shicyoson/j/shicyoson18/t-page.asp) 
 
 ## Description of data
-These data are collected from national official statistics. 
+These data are collected from Japan's official national statistics. Each row represents a region (prefecture or municipal), and each column represents an attribute (demographic or economic feature). 
 
 ## Why you are interested in this topic
-I often discussed this topic when I worked for the government. Obviously, the low fertility rate and aging population have critical impacts on Japan's economic growth, and the overpopulation in Tokyo is one of the driving forces to exacerbate this phenomenon. Data visualization can be a powerful tool to provoke discussion on why the overpopulation matters. 
+I often discussed this topic when I worked for the Japanese government. The low fertility rate and aging population is the biggest issue in Japan, and the overpopulation in Tokyo is one of the driving forces to exacerbate this phenomenon. I believe data visualization can be a powerful tool to provoke discussion on why the population concentration in Tokyo matters. 
 
 ## Thoughts on how you would hope to use this data
 | Data        | Type of visualization |
@@ -25,7 +25,7 @@ I often discussed this topic when I worked for the government. Obviously, the lo
 | economic features (TBD)  | scatter plot or bar chart  |
 
 ## Potential data points
-I will use either prefecture level data (47 points) or municiple level data (1964 points). The prefecture level data is the primary focused but municiple data might be useful to create granular maps. 
+I will use either prefecture level data (47 points) or municipal level data (1964 points). The prefecture level data is the primary focused but municiple data might be useful to create granular maps. Interested attirbutes are described above. 
 
 ## Any concerns about the data
 * Some Japanese may require translation to English.
