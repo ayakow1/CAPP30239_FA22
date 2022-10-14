@@ -5,6 +5,6 @@ This is a repository for CAPP30239 Data Visualization for Policy Analysis taught
 ## Contents
 `week_01`: Data selfie, Introduction to HTML/CSS. 
 
-`week_02`: Topics in design, Introduction to JS, finding data for final project. 
+`week_02`: Topics in design, Introduction to JS. 
 
-`week_03`: Story telling, D3 bar chart exercise. 
+`week_03`: Story telling, D3 bar chart exercise, finding data for final project
