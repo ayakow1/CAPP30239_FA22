@@ -1,3 +1,7 @@
+# Week 1
+
+This week, we worked on Data Selfie described below. We also practiced basics of HTML/CSS in `index.html`.
+
 # Ayako Watanabe
 
 ![Dataselfie](dataselfie.jpg)
