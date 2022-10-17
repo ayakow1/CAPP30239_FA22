@@ -1,8 +1,10 @@
 # Week 3
+This week, we worked on D3.js to create a bar chart. `index.html` and `script.js` are for in class exercise and `homework.html` and `homework.js` are for week3 assignment. We also worked on data collection for the final project  
 
-This week, we worked on D3.js to create a bar chart. `index.html` and `script.js` are for in class exercise and `homework.html` and `homework.js` are for week3 assignment. We also worked on data collection for the final project as described below. 
+## Homework - Bar chart exercise
+![Bar chart](homework.png=100x20)
 
-# Data Colections
+## Data Colections
 
 This describes collecting data for the final project as a week2 assignment. I will focus on population concentration in Tokyo, one of the biggest concerns in Japan's economy. The overpopulation has caused a sizeable economic gap with other areas, increased the risk of disasters, including the COVID-19 pandemic, and contributed to the declining fertility rate. Although concentrating political, financial, and economic functions on the capital could have raised productivity, it is not sustainable. This is a personal project to address this issue through data vizualization.
 
