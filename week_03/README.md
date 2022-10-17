@@ -2,7 +2,8 @@
 This week, we worked on D3.js to create a bar chart. `index.html` and `script.js` are for in class exercise and `homework.html` and `homework.js` are for week3 assignment. We also worked on data collection for the final project  
 
 ## Homework - Bar chart exercise
-![Bar chart](homework.png=100x20)
+This is a bar chart for library visits around the Universit of Chicago in January 2022 created by D3.js. Data are taken from [Chicago Data Portal].(https://data.cityofchicago.org/Education/Libraries-2022-Visitors-by-Location/ykhx-yxn9)
+<img src="homework.png" alt="bar chart" width="800" height="400"/>
 
 ## Data Colections
 
