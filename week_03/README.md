@@ -1,6 +1,6 @@
 # Week 3
 
-This week, we worked on D3.js to create a bar chart.
+This week, we worked on D3.js to create a bar chart. `index.html` and `script.js` are for in class exercise and `homework.html` and `homework.js` are for week3 assignment. We also worked on data collection for the final project as described below. 
 
 # Data Colections
 
