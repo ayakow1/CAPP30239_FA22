@@ -14,5 +14,6 @@ This line chart uses long-term-interest-canada.csv which shows change of monthly
 
 `homework.html`/`homework.js`: Area chart of Interest Rates by Month in 2020 (Canada)
 
+![area chart](homework.png)
 
 
