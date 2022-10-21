@@ -7,4 +7,6 @@ This is a repository for CAPP30239 Data Visualization for Policy Analysis taught
 
 `week_02`: Topics in design, Introduction to JS. 
 
-`week_03`: Story telling, D3 bar chart exercise, finding data for final project
+`week_03`: Theory, D3 bar chart exercise, finding data for final project
+
+`week_04`: Story Telling, D3 line/area chart exercises
