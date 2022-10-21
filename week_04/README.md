@@ -10,6 +10,9 @@ This week, we worked on D3.js to create line charts.
 
 ## Homework
 
-This line chart uses long-term-interest-canada.csv which shows change of monthly interest rates over time. Source: (OECD)[https://data.oecd.org/interest/long-term-interest-rates.htm#indicator-chart]
+This line chart uses long-term-interest-canada.csv which shows change of monthly interest rates over time. Source: [OECD](https://data.oecd.org/interest/long-term-interest-rates.htm#indicator-chart)
 
-- `homework.html`/`homework.js`: Area chart of Interest Rates by Year (Canada)
+`homework.html`/`homework.js`: Area chart of Interest Rates by Month in 2020 (Canada)
+
+
+
