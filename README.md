@@ -11,6 +11,7 @@ This is a repository for CAPP30239 Data Visualization for Policy Analysis taught
 `week_03`: Theory, D3 bar chart exercise, finding data for final project
 * [Class Exercise - bar chart](https://ayakow1.github.io/CAPP30239_FA22/week_03/index.html)
 * [Homework - barchart](https://ayakow1.github.io/CAPP30239_FA22/week_03/homework.html)
+* [Finding Data](https://github.com/ayakow1/CAPP30239_FA22/tree/main/week_03#data-colections)
 
 `week_04`: Story Telling, D3 line/area chart exercises
 * [Class Exercise - line chart](https://ayakow1.github.io/CAPP30239_FA22/week_04/line.html)
