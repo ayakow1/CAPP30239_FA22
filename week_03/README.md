@@ -13,12 +13,17 @@ This describes collecting data for the final project as a week2 assignment. I wi
 
 ## Data source: Title, Agency, Location, Link
 
-- `migration.csv` : Number of Net-migration by Age and Sex for Prefectures from [Report on Internal Migration in Japan](https://www.e-stat.go.jp/en/stat-search/files?page=1&layout=datalist&toukei=00200523&tstat=000000070001&cycle=7&year=20210&month=0&tclass1=000001148746&stat_infid=000032163826&result_back=1&tclass2val=0)
-- `women_migration_2017.csv` : Number of Net-migration by Age and Sex from [Report on Internal Migration in Japan in 2017](https://www.e-stat.go.jp/en/dbview?sid=0003211022)
 - `economics.csv` : Statistical Observations of Prefectures/Labor from [System of Social and Demographic Statistics](https://www.e-stat.go.jp/en/stat-search/files?page=1&layout=datalist&toukei=00200502&tstat=000001162826&cycle=0&year=20220&month=0&tclass1=000001162827&stat_infid=000032169057&tclass2val=0)
-- `fertility_rate.csv` : Trends in total fertility rates by each prefecture from [Vital Statistics](https://www.e-stat.go.jp/en/stat-search/files?page=1&layout=datalist&toukei=00450011&tstat=000001028897&cycle=7&year=20200&month=0&tclass1=000001053058&tclass2=000001053061&tclass3=000001053064&stat_infid=000032118531&result_back=1&tclass4val=0)
+- `fertility_rate.csv` : Time Series of total fertility rates by each prefecture from [Vital Statistics](https://www.e-stat.go.jp/en/stat-search/files?page=1&layout=datalist&toukei=00450011&tstat=000001028897&cycle=7&year=20200&month=0&tclass1=000001053058&tclass2=000001053061&tclass3=000001053064&stat_infid=000032118531&result_back=1&tclass4val=0)
+- `fertility_rate_all.csv` : Time series of national fertility rate from [Vital Statistics](https://www.mhlw.go.jp/toukei/saikin/hw/jinkou/kakutei21/index.html)
 - `foreigners_2020.csv` : Population by Sex and Nationality from [Population Census 2020](https://www.e-stat.go.jp/en/dbview?sid=0003445244)
-- `prediction.csv` : Regional Population Projections for Japan: 2015–2045 from [The National Institute of Population and Social Security Research](https://www.ipss.go.jp/pp-shicyoson/j/shicyoson18/t-page.asp)
+- `economics.csv` : Statistical Observations of Prefectures/Labor from [System of Social and Demographic Statistics](https://www.e-stat.go.jp/en/stat-search/files?page=1&layout=datalist&toukei=00200502&tstat=000001162826&cycle=0&year=20220&month=0&tclass1=000001162827&stat_infid=000032169057&tclass2val=0)
+- `migration.csv` : Number of Net-migration by Age and Sex for Prefectures from [Report on Internal Migration in Japan](https://www.e-stat.go.jp/en/stat-search/files?page=1&layout=datalist&toukei=00200523&tstat=000000070001&cycle=7&year=20210&month=0&tclass1=000001148746&stat_infid=000032163826&result_back=1&tclass2val=0)
+- `population.csv` : Time series of total population from [Population Estimates / Time Series](https://www.e-stat.go.jp/en/stat-search/files?page=1&layout=datalist&toukei=00200524&tstat=000000090001&cycle=0&tclass1=000000090004&tclass2=000001051180&stat_infid=000013168601&cycle_facet=tclass1%3Acycle&tclass3val=0)
+- `projection_prefecture.csv` : Regional Population Projections for Japan: 2015–2045 from [The National Institute of Population and Social Security Research](https://www.ipss.go.jp/pp-shicyoson/j/shicyoson18/t-page.asp)
+- `projection_1997-2017.csv` : Historical National Population Projections for Japan from [The National Institute of Population and Social Security Research](https://www.ipss.go.jp/index-e.asp)
+- `projection_f_1997-2017.csv` : Historical National Fertility Rate Assumptions for Japan from [The National Institute of Population and Social Security Research](https://www.ipss.go.jp/index-e.asp)
+- `women_migration_2017.csv` : Number of Net-migration by Age and Sex in 2017 from [Report on Internal Migration in Japan in 2017](https://www.e-stat.go.jp/en/dbview?sid=0003211022)
 
 ## Description of data
 
