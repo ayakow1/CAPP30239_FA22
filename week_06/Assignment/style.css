@@ -1,0 +1,35 @@
+* {
+  font-family: "Slabo 27px", serif;
+  background-color: black;
+  color: white;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+#container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+svg {
+  max-height: 100vh;
+  font-size: 24px;
+}
+
+.domain {
+  display: none;
+}
+
+svg text {
+  font-size: 12px;
+}
+
+.x-axis text {
+  transform: translateY(5px);
+}
+
+.y-axis text {
+  transform: translateX(-5px);
+}
