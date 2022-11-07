@@ -33,15 +33,13 @@ var linearGradient = defs
   .append("linearGradient")
   .attr("id", "linear-gradient");
 
-//Set the color for the start (0%)
 linearGradient.append("stop").attr("offset", "0%").attr("stop-color", "white"); //light blue
-//Set the color for the end (25%)
+
 linearGradient
   .append("stop")
   .attr("offset", "25%")
   .attr("stop-color", "#094487");
 
-//Set the color for the end (100%)
 linearGradient
   .append("stop")
   .attr("offset", "200%")
