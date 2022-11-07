@@ -34,8 +34,9 @@ d3.json("climate-jan.json").then((data) => {
     .thresholds(10)
     .value((d) => d.average)(data);
 
-  let g = binGroups.selectAll("g").data(bins).join("g");
+  let g = binGroups.selectAll("g").data(bins).join("g"); //Match DOM and data.
 
+  // g is for combining rect and text.
   g.append("rect")
     .attr("x", (d) => x(d.x0) + padding / 2)
     .attr("width", (d) => x(d.x1) - x(d.x0) - padding)

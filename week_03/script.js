@@ -21,7 +21,7 @@ d3.csv("covid.csv").then((data) => {
 
   let x = d3
     .scaleBand() //1st: domain (data 0, 1000), 2nd range (pixel space to take up)
-    .domain(data.map((d) => d.country)) //get each row and put it into domain
+    .domain([]) //get each row and put it into domain
     .range([margin.left, width - margin.right])
     .padding(0.1);
 
