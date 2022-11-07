@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shrinking Population of Japan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="container_dot">
+      <div id="dotchart">
+        <h2>The number of young people will decrease</h2>
+      </div>
+    </div>
+    <div id="container_area">
+      <div id="areachart">
+        <h2>People are moving to Tokyo area</h2>
+      </div>
+    </div>
+    <div id="container_scatter">
+      <div id="scatter">
+        <h2>Fertility rates are low at Tokyo area where prices are high</h2>
+      </div>
+    </div>
+    <div id="container_stackedarea">
+      <div id="stackedareachart">
+        <h2></h2>
+        <!-- radio buttons -->
+        <p>
+          <div>
+            Work status:
+              &nbsp;<input type="radio" name="work" value="Both working" checked="checked">
+                Both working
+              &nbsp;<input type="radio" name="work" value="Only woman is unemployed">
+                Only woman is unemployed
+          </div>
+          <div>
+            Last Child's Age:
+              <input type="radio" name="child" value="-6"  checked="checked">
+                0-6
+              <input type="radio" name="child" value="6-17">
+                6-17
+              <input type="radio" name="child" value="18-">
+                18-
+          </div>
+        </p>
+      </div>
+    </div>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="dot.js"></script>
+    <script src="area.js"></script>
+    <script src="scatter.js"></script>
+    <script src="stackedarea.js"></script>
+  </body>
+</html>

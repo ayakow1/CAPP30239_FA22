@@ -1,0 +1,82 @@
+* {
+  font-family: "Slabo 27px", serif;
+  background-color: #ffffe5;
+  color: black;
+}
+
+a {
+  color: #369;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+#container_dot {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#container_area {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+#container_scatter {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#container_stackedarea {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.domain {
+  display: none;
+}
+
+svg text {
+  font-size: 10px;
+}
+
+.highlight path {
+  stroke: #696969;
+  opacity: 1;
+}
+
+.highlight text {
+  fill: steelblue;
+}
+
+.svg-tooltip,
+.svg-tooltip2 {
+  background: rgba(69, 77, 93, 0.9);
+  border-radius: 5px;
+  color: #fff;
+  display: block;
+  font-size: 12px;
+  line-height: 16px;
+  text-transform: none;
+  max-width: 320px;
+  padding: 1rem;
+  position: absolute;
+  text-overflow: ellipsis;
+  white-space: pre;
+  z-index: 300;
+  visibility: hidden;
+}
+
+.svg-tooltip2 {
+  max-width: 520px;
+}
+
+#scatter .y-axis line {
+  stroke: #bdbdbd; /* change grid line */
+}
+
+foreignObject p {
+  font-size: 10px;
+  background-color: transparent;
+  text-align: center;
+}
