@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fatal Shooting by Police</title>
+    <title>Fatal Police Shooting</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,19 +16,39 @@
   <body>
     <div id="container">
       <h1>Fatal Police Shooting</h1>
-      <p>Description.</p>
+      <p>In order to reveal the story of fatal police shooting, we made use of stacked histogram chart, calendar chart and line chart to show victims by age and gender; victims by day and victims by race. 
+        Stacked histogram chart enables clear comparison between different groups. 
+        Calendar provides a new perspective in terms of how many shootings happened each day. 
+        Line chart enables us to dig deep into potential racial discrimination behind shooting. 
+        Based on the result, we would propose that it might be helpful to further look into victims by race in proportion to the total population of that race.</p>
       <div id="barchart">
         <h2>Victims by Age and Gender</h2>
-        <p>Description.</p>
+        <p>Stacked histogram chart provides clear comparison of victim gender and age. Victims are mostly young males (21-40 yr old). 
+           Generally, stacked bar charts are used to represent how the partial elements add up to total and histograms are used to show the distributions of quantitative data (<a href="https://m2.material.io/design/communication/data-visualization.html#types">Reference: Material Design</a>). 
+           Combining these properties together, we made stacked histogram chart to show the distributions of age as well as the proportion of gender in each bin. 
+        </p>
       </div>
       <div id="calender">
         <h2>Victims by Days</h2>
-        <p>Description.</p>
+        <p>Calendar chart shows us the spread of shooting. In 2015, May and October seem to be the two months with most shootings happened. 
+            Calender charts are useful to show the daily frequencies or changes of events. Commonly, x axis represents weeks and y axis represents the day of the week (<a href="https://observablehq.com/@bensimonds/calendar-charts">Reference: Observables</a>). 
+            We decided to use the calender chart because it could be complicated to have 365 days on x axis and data have a wide range of fluctuations. 
+            For example, if we use a line chart instead, the line goes up and down too frequently, which makes harder to read. 
+        </p>
         <div id="legend">
         </div>
+      </div>
+      <div id="race">
+        <h2>Victims by Race</h2>
+        <p>Line charts are typically used for visualizing how one continuous variable, on the y-axis, changes in relation to the variable on the x-axis. 
+            Though often x variable represents time, it may also represent other categories. 
+            In our case here, line chart shows number of victims by race, with victim number on y axis and race on x axis. 
+            The steep drop of line also attracts readers' attention to big differences of number of victims among different races. 
+            Specifically, in 2015, close to 800 white people were shot and close to 400 black people were shot.</p>
       </div>
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="bar.js"></script>
     <script src="calender.js"></script>
+    <script src="line.js"></script>
   </body>
 </html>
