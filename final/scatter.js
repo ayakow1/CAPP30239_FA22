@@ -86,6 +86,7 @@ d3.csv("../data/scatter.csv").then((data) => {
     .on("mouseover", function (event, d) {
       previous = d3.select(this).style("fill");
       d3.select(this).attr("fill", "black");
+      console.log(d);
       tooltip
         .style("visibility", "visible")
         .html(

@@ -50,7 +50,8 @@ svg text {
 }
 
 .svg-tooltip,
-.svg-tooltip2 {
+.svg-tooltip2,
+.svg-tooltip3 {
   background: rgba(69, 77, 93, 0.9);
   border-radius: 5px;
   color: #fff;
@@ -79,4 +80,8 @@ foreignObject p {
   font-size: 10px;
   background-color: transparent;
   text-align: center;
+}
+
+.chart-title {
+  font-size: 20px;
 }
