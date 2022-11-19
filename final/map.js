@@ -5,8 +5,8 @@ const tooltip = d3
   .style("position", "absolute")
   .style("visibility", "hidden");
 
-const height = 810,
-  width = 975;
+const height = 400,
+  width = 400;
 
 let prefectures;
 let mesh;
