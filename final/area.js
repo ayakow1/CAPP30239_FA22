@@ -134,15 +134,24 @@ d3.csv("../data/migration.csv").then((data) => {
     .style("font-size", "8px")
     .attr("alignment-baseline", "middle");
 
+  //   svg
+  //     .append("text")
+  //     .attr("x", 15)
+  //     .attr("y", height - 3)
+  //     .text(
+  //       "Tokyo area (Tokyo, Kanagawa, Saitama, Chiba), Nagoya area (Aichi, Gifu, Mie), and Osaka area (Osaka, Hyogo, Kyoto, Nara). All others are included in Regions."
+  //     )
+  //     .style("font-size", "8px")
+  //     .attr("alignment-baseline", "left");
+
   svg
-    .append("text")
+    .append("foreignObject") //put html annotation (more flexible than text)
+    .attr("class", "datasource")
     .attr("x", 15)
-    .attr("y", height - 3)
-    .text(
-      "Tokyo area (Tokyo, Kanagawa, Saitama, Chiba), Nagoya area (Aichi, Gifu, Mie), and Osaka area (Osaka, Hyogo, Kyoto, Nara). All others are included in Regions."
-    )
-    .style("font-size", "8px")
-    .attr("alignment-baseline", "left");
+    .attr("y", height - 10)
+    .append("xhtml:div") //sth needed for browser
+    .append("p")
+    .html(`text`);
 
   svg
     .append("text")

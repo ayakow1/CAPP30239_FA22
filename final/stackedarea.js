@@ -190,7 +190,7 @@ d3.json("../data/time.json").then((data) => {
         .style("fill", function (d) {
           return color(d.key);
         })
-        .style("opacity", 0.5)
+        .style("opacity", 0.7)
         .attr("stroke", "grey")
         .attr("stroke-width", "0.2");
 
@@ -198,7 +198,9 @@ d3.json("../data/time.json").then((data) => {
         .on("mouseover", function (event, d) {
           const subgroupName = d.key;
 
-          tooltip.style("visibility", "visible").html(`${subgroupName}`);
+          tooltip
+            .style("visibility", "visible")
+            .html(`${actions_fortooltip[subgroupName]}`);
         })
         .on("mousemove", function (event) {
           tooltip
@@ -236,7 +238,7 @@ d3.json("../data/time.json").then((data) => {
       .attr("fill", color(action))
       .attr("stroke", "black")
       .attr("stroke-width", "0.5")
-      .style("opacity", 0.5);
+      .style("opacity", 0.7);
     svg
       .append("text")
       .attr("x", gapcal(index, cumulate + 10))
@@ -286,3 +288,18 @@ var actions = [
   "Washing",
   "Work",
 ];
+
+var actions_fortooltip = {
+  Child_care: "Child care",
+  Household_activities: "Household activities",
+  Eating: "Eating",
+  Hobby: "Hobby, Sports, Socializing",
+  Others: "Others (Study, Volunteers, Medical Treatment)",
+  Relaxing: "Relaxing",
+  Shopping: "Shopping",
+  Sleep: "Sleep",
+  TV: "TV, Radio, Newspaper, Magazines",
+  Traveling: "Traveling",
+  Washing: "Washing, Bathing, etc",
+  Work: "Work",
+};

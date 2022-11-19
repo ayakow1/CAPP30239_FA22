@@ -3,8 +3,7 @@
 
 d3.csv("../data/prediction_dot.csv").then((data) => {
   for (let d of data) {
-    d.y_2025 = +d.y_2025;
-    d.y_2035 = +d.y_2035;
+    d.y_2020 = +d.y_2020;
     d.y_2045 = +d.y_2045;
   }
 
@@ -51,7 +50,7 @@ d3.csv("../data/prediction_dot.csv").then((data) => {
     .data(data)
     .join("line")
     .attr("x1", function (d) {
-      return x(d.y_2025);
+      return x(d.y_2020);
     })
     .attr("x2", function (d) {
       return x(d.y_2045);
@@ -73,13 +72,13 @@ d3.csv("../data/prediction_dot.csv").then((data) => {
     .join("circle")
     .attr("class", "circle1")
     .attr("cx", function (d) {
-      return x(d.y_2025);
+      return x(d.y_2020);
     })
     .attr("cy", function (d) {
       return y(d.ages);
     })
     .attr("r", "6")
-    .style("fill", "#feb24c");
+    .style("fill", "#fb9a99");
 
   //   // Circles of variable 2
   //   svg
@@ -140,7 +139,7 @@ d3.csv("../data/prediction_dot.csv").then((data) => {
       tooltip
         .style("visibility", "visible")
         .html(
-          `Year: 2025<br />Age: ${d.ages}<br />Population: ${d.y_2025.toFixed(
+          `Year: 2020<br />Age: ${d.ages}<br />Population: ${d.y_2020.toFixed(
             0
           )}`
         );
@@ -179,7 +178,7 @@ d3.csv("../data/prediction_dot.csv").then((data) => {
     .attr("cx", width - 110)
     .attr("cy", 30)
     .attr("r", 3)
-    .style("fill", "#feb24c");
+    .style("fill", "#fb9a99");
   svg
     .append("circle")
     .attr("cx", width - 75)
@@ -191,7 +190,7 @@ d3.csv("../data/prediction_dot.csv").then((data) => {
     .append("text")
     .attr("x", width - 105)
     .attr("y", 30)
-    .text("2025")
+    .text("2020")
     .style("font-size", "8px")
     .attr("alignment-baseline", "middle");
   svg
@@ -235,7 +234,7 @@ d3.csv("../data/prediction_dot.csv").then((data) => {
     .style("opacity", 0.5);
 
   let str = `Percentage of people<br /> above 60: <br />
-             36.3% (2025)<br />
+             34.8% (2020)<br />
              &#8595<br /> 
              43.4% (2045)`;
 
