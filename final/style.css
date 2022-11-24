@@ -1,7 +1,13 @@
+/* General setting */
+
 * {
   font-family: "Slabo 27px", serif;
   background-color: #ffffe5;
   color: black;
+}
+
+b {
+  font-family: "Roboto Slab", serif;
 }
 
 a {
@@ -11,12 +17,34 @@ a {
 h1 {
   font-size: 48px;
   text-align: center;
+  margin: 50px 0px 0px 0px;
 }
 
+h2 {
+  font-size: 24px;
+  margin: 0 auto;
+  width: 1300px;
+  padding-top: 80px;
+}
+
+.domain {
+  display: none;
+}
+
+/* Custom setting */
+
+/* Heading part */
 #headline {
   text-align: center;
 }
 
+.introduction {
+  margin: 0 auto;
+  width: 1300px;
+  padding-top: 10px;
+}
+
+/* Map part */
 #container_map {
   width: 1300px;
   margin: 0 auto;
@@ -34,38 +62,62 @@ h1 {
   margin: 0px;
 }
 
+/* Dot chart part */
+
 #container_dot {
   max-width: 600px;
   margin: 0 auto;
 }
+
+/* Area chart part */
 
 #container_area {
   max-width: 1000px;
   margin: 0 auto;
 }
 
+/* Scatter plot part */
+
 #container_scatter {
   max-width: 600px;
   margin: 0 auto;
 }
+
+#scatter .y-axis line {
+  stroke: #bdbdbd; /* change grid line */
+}
+
+/* Stacked area chart part */
 
 #container_stackedarea {
   max-width: 1300px;
   margin: 0 auto;
 }
 
+/* Line chart part */
+
 #container_line {
   max-width: 1300px;
   margin: 0 auto;
 }
 
-.domain {
-  display: none;
-}
+/* svg general */
 
 svg text {
   font-size: 10px;
 }
+
+foreignObject p {
+  font-size: 10px;
+  background-color: transparent;
+  text-align: center;
+}
+
+.chart-title {
+  font-size: 20px;
+}
+
+/* svg interactive part */
 
 .highlight path {
   stroke: #696969;
@@ -97,18 +149,4 @@ svg text {
 
 .svg-tooltip2 {
   max-width: 520px;
-}
-
-#scatter .y-axis line {
-  stroke: #bdbdbd; /* change grid line */
-}
-
-foreignObject p {
-  font-size: 10px;
-  background-color: transparent;
-  text-align: center;
-}
-
-.chart-title {
-  font-size: 20px;
 }
