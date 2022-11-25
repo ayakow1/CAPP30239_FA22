@@ -27,11 +27,14 @@ h2 {
   padding-top: 80px;
 }
 
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
 .domain {
   display: none;
 }
-
-/* Custom setting */
 
 /* Heading part */
 #headline {
@@ -44,64 +47,84 @@ h2 {
   padding-top: 10px;
 }
 
-/* Map part */
-#container_map {
+/* Main part */
+
+.section-container {
   width: 1300px;
   margin: 0 auto;
+  padding-top: 90px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  column-gap: 40px;
 }
 
+.section-container > * {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1 2 auto;
+  justify-content: flex-start;
+}
+
+.text-container {
+  position: relative;
+  width: 30%;
+}
+
+#chart-container {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  top: 12.5vh;
+  height: 75vh;
+}
+
+/* .chart-container .chart {
+  position: relative;
+  opacity: 0;
+  z-index: -1;
+}
+
+.chart-container .chart.is-active {
+  position: relative;
+  opacity: 1;
+  z-index: 1;
+} */
+
+.hidden-chart {
+  position: absolute;
+  visibility: hidden;
+}
+
+.step {
+  opacity: 0;
+}
+
+.step.is-active {
+  opacity: 1;
+}
+
+/* Each chart part */
+
 #row1 {
-  column-count: 3;
+  column-count: 2;
+  margin-bottom: 50px;
 }
 
 #legend {
-  margin: 30px 0px 0px;
+  margin: 0px;
 }
 
 #legend svg {
   margin: 0px;
 }
 
-/* Dot chart part */
-
-#container_dot {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-/* Area chart part */
-
-#container_area {
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-/* Scatter plot part */
-
-#container_scatter {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
 #scatter .y-axis line {
   stroke: #bdbdbd; /* change grid line */
 }
-
-/* Stacked area chart part */
-
-#container_stackedarea {
-  max-width: 1300px;
-  margin: 0 auto;
-}
-
-/* Line chart part */
-
-#container_line {
-  max-width: 1300px;
-  margin: 0 auto;
-}
-
-/* svg general */
 
 svg text {
   font-size: 10px;
@@ -115,9 +138,10 @@ foreignObject p {
 
 .chart-title {
   font-size: 20px;
+  margin-bottom: 20px;
 }
 
-/* svg interactive part */
+/* Interactive part */
 
 .highlight path {
   stroke: #696969;

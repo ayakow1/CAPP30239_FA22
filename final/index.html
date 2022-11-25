@@ -11,93 +11,118 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <section id="intro">
     <!-- Introduction Part -->
-    <h1>Shrinking Population of Japan</h1>
-    <!-- TODO: Add articles, update css layout, consider accessibility, enable highligh in line-chart.  -->
-    <p id="headline">
-        By Ayako Watanabe
-    </p>
-    <h2>Introduction</h2>
-    <p class="introduction">
-        According to <a href="https://www.ipss.go.jp/pp-shicyoson/j/shicyoson18/t-page.asp" >the National Institute of Population and Social Security Research</a>, 
-        <b>15%</b> of the population of Japan is projected to decrease significantly and 
-        the number of people above 60 years old will be <b>43%</b> by 2045. The main reasons are the declining fertility rate and closed policy for immigrants. </p>
-    <p class="introduction">
-        In an effort to address this issue, we visualize the trends of demographic shift 
-        and examine why this projection is reasonable. Scroll down to learn more. 
-    </p>
-
+        <h1>Shrinking Population of Japan</h1>
+        <!-- TODO: Add articles, update css layout, consider accessibility, enable highligh in line-chart.  -->
+        <p id="headline">
+            By Ayako Watanabe
+        </p>
+        <h2>Introduction</h2>
+        <p class="introduction">
+            According to <a href="https://www.ipss.go.jp/pp-shicyoson/j/shicyoson18/t-page.asp" >the National Institute of Population and Social Security Research</a>, 
+            <b>15%</b> of the population of Japan is projected to decrease significantly and 
+            the number of people above 60 years old will be <b>43%</b> by 2045. The main reasons are the declining fertility rate and closed policy for immigrants. </p>
+        <p class="introduction">
+            In an effort to address this issue, we visualize the trends of demographic shift 
+            and examine why this projection is reasonable. Scroll down to learn more. 
+        </p>
+    </section>
     <!-- Chart Part -->  
-    <div id="container_map">
-        <h2>Japan's population are projected to dramatically decrease compared to 2020</h2>
-        <p>Data source: Regional Population Projections for Japan: 2015–2045 from 
-            <a href="https://www.ipss.go.jp/pp-shicyoson/j/shicyoson18/t-page.asp" >[The National Institute of Population and Social Security Research]</a></p>
-        <div id="legend"></div>
-        <div id="row1"></div>
-    </div>    
-    <div id="container_dot">
-      <div id="dotchart">
-        <h2>Japan will become a super-aging country</h2>
-        <p>Data source: Regional Population Projections for Japan: 2015–2045 from 
-            <a href="https://www.ipss.go.jp/pp-shicyoson/j/shicyoson18/t-page.asp" >[The National Institute of Population and Social Security Research]</a></p>
-      </div>
-    </div>
-    <div id="container_area">
-      <div id="areachart">
-        <h2>People are moving to Tokyo area</h2>
-        <p>Data source: Number of Net-migration by Age and Sex for Prefectures from 
-            <a href="https://www.e-stat.go.jp/en/stat-search/files?page=1&layout=datalist&toukei=00200523&tstat=000000070001&cycle=7&year=20210&month=0&tclass1=000001148746&stat_infid=000032163826&result_back=1&tclass2val=0" >[Report on Internal Migration in Japan]</a></p>
-      </div>
-    </div>
-    <div id="container_scatter">
-      <div id="scatter">
-        <h2>Fertility rates are low at Tokyo area where prices are high</h2>
-        <p>Data source: Prefectural income per person, Fertility rate, and Net migration by Prefecutres in 2017 from 
-            <a href="https://www.e-stat.go.jp/en/stat-search/files?page=1&layout=datalist&toukei=00450011&tstat=000001028897&cycle=7&year=20200&month=0&tclass1=000001053058&tclass2=000001053061&tclass3=000001053064&stat_infid=000032118531&result_back=1&tclass4val=0">[Vital Statistics]</a>, 
-            <a href="https://www.e-stat.go.jp/en/stat-search/files?page=1&layout=datalist&toukei=00200502&tstat=000001162826&cycle=0&year=20220&month=0&tclass1=000001162827&stat_infid=000032169057&tclass2val=0">[System of Social and Demographic Statistics]</a>, 
-            <a href="https://www.e-stat.go.jp/en/dbview?sid=0003211022">[Report on Internal Migration in Japan in 2017]</a>
-        </p>
-      </div>
-    </div>
-    <div id="container_stackedarea">
-      <div id="stackedareachart">
-        <h2>Wives are more engaged in household activities and child care than their husbands</h2>
-        <p>Data source: Participation rate of a married couple in activities by Time division, Sex, Age of own youngest child, Kind of activities from <a href="https://www.e-stat.go.jp/en/stat-search/files?page=1&layout=datalist&toukei=00200533&tstat=000001158160&cycle=0&year=20210&month=0&tclass1=000001158164&tclass2=000001158180&tclass3=000001158184&tclass4val=0">[Survey on Time Use and Leisure Activities]</a></p>
-        <!-- radio buttons -->
-        <p>
-          <div>
-            Work status:
-              &nbsp;<input type="radio" name="work" value="Both working" checked="checked">
-                Both working
-              &nbsp;<input type="radio" name="work" value="Only woman is unemployed">
-                Only woman is unemployed
-          </div>
-          <div>
-            Last Child's Age:
-              <input type="radio" name="child" value="-6"  checked="checked">
-                0-6
-              <input type="radio" name="child" value="6-17">
-                6-17
-              <input type="radio" name="child" value="18-">
-                18-
-          </div>
-        </p>
-      </div>
-    </div>
-    <div id="container_line">
-      <div id="linechart">
-        <h2>How reliable are the projections?</h2>
-        <p>Data source: Historical Total Population Projections from 
-            <a href="https://www.ipss.go.jp/index-e.asp">[The National Institute of Population and Social Security Research]</a>
-             and Actual Population from <a href="https://www.e-stat.go.jp/en/stat-search/files?page=1&layout=datalist&toukei=00200524&tstat=000000090001&cycle=0&tclass1=000000090004&tclass2=000001051180&stat_infid=000013168601&cycle_facet=tclass1%3Acycle&tclass3val=0">[Population Estimates / Time Series]</a>. 
-             Historical Fertility Rate Projection from <a href="https://www.ipss.go.jp/index-e.asp">[The National Institute of Population and Social Security Research]</a>
-             and Actual Fertility rate from <a href="https://www.mhlw.go.jp/toukei/saikin/hw/jinkou/kakutei21/index.html">[Vital Statistics]</a>. 
-            </p>
-      </div>
-    </div>    
+    <section class='section-container'>
+        <div class='text-container'>
+            <div class="step is-active" data-step="0">
+                <p>Data source: Regional Population Projections for Japan: 2015–2045 from 
+                    <a href="https://www.ipss.go.jp/pp-shicyoson/j/shicyoson18/t-page.asp" >[The National Institute of Population and Social Security Research]</a></p>
+            </div>
+            <div class="step" data-step="1">
+                <h2>Japan will become a super-aging country</h2>
+                <p>Data source: Regional Population Projections for Japan: 2015–2045 from 
+                <a href="https://www.ipss.go.jp/pp-shicyoson/j/shicyoson18/t-page.asp" >[The National Institute of Population and Social Security Research]</a></p>
+            </div>
+            <div class="step" data-step="2">
+                <h2>People are moving to Tokyo area</h2>
+                <p>Data source: Number of Net-migration by Age and Sex for Prefectures from 
+                    <a href="https://www.e-stat.go.jp/en/stat-search/files?page=1&layout=datalist&toukei=00200523&tstat=000000070001&cycle=7&year=20210&month=0&tclass1=000001148746&stat_infid=000032163826&result_back=1&tclass2val=0" >[Report on Internal Migration in Japan]</a></p>
+            </div>
+            <div class="step" data-step="3">
+                <h2>Fertility rates are low at Tokyo area where prices are high</h2>
+                <p>Data source: Prefectural income per person, Fertility rate, and Net migration by Prefecutres in 2017 from 
+                    <a href="https://www.e-stat.go.jp/en/stat-search/files?page=1&layout=datalist&toukei=00450011&tstat=000001028897&cycle=7&year=20200&month=0&tclass1=000001053058&tclass2=000001053061&tclass3=000001053064&stat_infid=000032118531&result_back=1&tclass4val=0">[Vital Statistics]</a>, 
+                    <a href="https://www.e-stat.go.jp/en/stat-search/files?page=1&layout=datalist&toukei=00200502&tstat=000001162826&cycle=0&year=20220&month=0&tclass1=000001162827&stat_infid=000032169057&tclass2val=0">[System of Social and Demographic Statistics]</a>, 
+                    <a href="https://www.e-stat.go.jp/en/dbview?sid=0003211022">[Report on Internal Migration in Japan in 2017]</a>
+                </p>
+            </div>
+            <div class="step" data-step="4">
+                <h2>Wives are more engaged in household activities and child care than their husbands</h2>
+                <p>Data source: Participation rate of a married couple in activities by Time division, Sex, Age of own youngest child, Kind of activities from <a href="https://www.e-stat.go.jp/en/stat-search/files?page=1&layout=datalist&toukei=00200533&tstat=000001158160&cycle=0&year=20210&month=0&tclass1=000001158164&tclass2=000001158180&tclass3=000001158184&tclass4val=0">[Survey on Time Use and Leisure Activities]</a></p>
+            </div>
+            <div class="step" data-step="5">
+                <h2>How reliable are the projections?</h2>
+                <p>Data source: Historical Total Population Projections from 
+                    <a href="https://www.ipss.go.jp/index-e.asp">[The National Institute of Population and Social Security Research]</a>
+                    and Actual Population from <a href="https://www.e-stat.go.jp/en/stat-search/files?page=1&layout=datalist&toukei=00200524&tstat=000000090001&cycle=0&tclass1=000000090004&tclass2=000001051180&stat_infid=000013168601&cycle_facet=tclass1%3Acycle&tclass3val=0">[Population Estimates / Time Series]</a>. 
+                    Historical Fertility Rate Projection from <a href="https://www.ipss.go.jp/index-e.asp">[The National Institute of Population and Social Security Research]</a>
+                    and Actual Fertility rate from <a href="https://www.mhlw.go.jp/toukei/saikin/hw/jinkou/kakutei21/index.html">[Vital Statistics]</a>. 
+                </p>
+            </div>
+        </div>  
+        <div id='chart-container'>  
+        </div>
+        <div class="hidden-chart">
+            <div id="map">
+                <h3 class="chart-title">Projected population growth rate compared to 2020</h3>
+                <div id="legend"></div>
+                <div id="row1"></div>
+            </div>
+            <div id="dot">
+                <h3 class="chart-title">Projected population growth rate compared to 2020</h3>
+                <div id="dotchart"></div>
+            </div>
+            <div id="area">
+                <h3 class="chart-title">Projected population growth rate compared to 2020</h3>
+                <div id="areachart"></div>
+            </div>
+            <div id="scat">
+                <h3 class="chart-title">Projected population growth rate compared to 2020</h3>
+                <div id="scatter"></div>
+            </div>
+            <div id="stackedarea">
+                <h3 class="chart-title">Projected population growth rate compared to 2020</h3>
+                <div id="radio">
+                    <p>
+                    <div>
+                        Work status:
+                        &nbsp;<input type="radio" name="work" value="Both working" checked="checked">
+                            Both working
+                        &nbsp;<input type="radio" name="work" value="Only woman is unemployed">
+                            Only woman is unemployed
+                    </div>
+                    <div>
+                        Last Child's Age:
+                        <input type="radio" name="child" value="-6"  checked="checked">
+                            0-6
+                        <input type="radio" name="child" value="6-17">
+                            6-17
+                        <input type="radio" name="child" value="18-">
+                            18-
+                    </div>
+                    </p>
+                </div>
+                <div id="stackedareachart"></div>
+            </div>
+            <div id="line">
+                <h3 class="chart-title">Projected population growth rate compared to 2020</h3>
+                <div id="linechart"></div>
+            </div>
+        </div>
+    </section> 
+
     <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://unpkg.com/scrollama"></script>
     <script src="../data/d3-color-legend.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
+    <script src="script.js"></script>
     <script src="map.js"></script>
     <script src="dot.js"></script>
     <script src="area.js"></script>

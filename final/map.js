@@ -5,8 +5,8 @@ const tooltip = d3
   .style("position", "absolute")
   .style("visibility", "hidden");
 
-const height = 400,
-  width = 400;
+const height = 500,
+  width = 500;
 
 let prefectures;
 let mesh;
@@ -19,12 +19,12 @@ Promise.all([
   prefectures = topojson.feature(japan, japan.objects.japan);
   mesh = topojson.mesh(japan, japan.objects.japan);
   projection = d3.geoMercator().fitSize([width, height], mesh);
-  createChart(data, "2025", "#row1");
-  createChart(data, "2035", "#row1");
-  createChart(data, "2045", "#row1");
+  //   createChart(data, "2025");
+  createChart(data, "2035");
+  createChart(data, "2045");
 });
 
-function createChart(allData, year, elemId) {
+function createChart(allData, year) {
   const data = allData[year];
   const dataById = {};
 
@@ -41,10 +41,10 @@ function createChart(allData, year, elemId) {
   const decimal = d3.format(",.2f");
 
   const svg = d3
-    .select(elemId)
+    .select("#row1")
     .append("div")
     .html(`<h3>${year}</h3>`)
-    .attr("class", "chart")
+    .attr("class", "map-each")
     .append("svg")
     .attr("viewBox", [0, 0, width, height]);
 
