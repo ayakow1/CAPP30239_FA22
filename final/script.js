@@ -1,11 +1,31 @@
+// import { create_map } from "map.js";
+
 // using d3 for convenience
 var scrolly = d3.select(".section-container");
 var container = document.getElementById("chart-container");
+var figure = scrolly.select(".chart-container");
 var article = scrolly.select(".text-container");
 var step = article.selectAll(".step");
 
 // initialize the scrollama
 var scroller = scrollama();
+
+// generic window resize listener event
+function handleResize() {
+  // 1. update height of step elements
+  var stepH = Math.floor(window.innerHeight * 0.75);
+  step.style("height", stepH + "px");
+
+  var figureHeight = window.innerHeight / 2;
+  var figureMarginTop = (window.innerHeight - figureHeight) / 2;
+
+  figure
+    .style("height", figureHeight + "px")
+    .style("top", figureMarginTop + "px");
+
+  // 3. tell scrollama to update new element dimensions
+  scroller.resize();
+}
 
 // scrollama event handlers
 function handleStepEnter(response) {
@@ -16,58 +36,49 @@ function handleStepEnter(response) {
   step.classed("is-active", function (d, i) {
     return i === response.index;
   });
+
   console.log(response.index);
+  while (container.firstChild) {
+    container.removeChild(container.firstChild);
+  }
+
+  d3.select(".svg-tooltip").style("visibility", "hidden");
+
   if (response.index === 0) {
-    console.log("here");
-    const clone = document.getElementById("map").cloneNode(true);
-    container.firstChild.remove();
-    container.appendChild(clone);
+    create_map();
   } else if (response.index == 1) {
-    const clone = document.getElementById("dot").cloneNode(true);
-    container.firstChild.remove();
-    container.appendChild(clone);
+    create_dot();
   } else if (response.index === 2) {
-    const clone = document.getElementById("area").cloneNode(true);
-    container.firstChild.remove();
-    container.appendChild(clone);
+    create_area();
   } else if (response.index === 3) {
-    const clone = document.getElementById("scat").cloneNode(true);
-    container.firstChild.remove();
-    container.appendChild(clone);
+    create_scatter();
   } else if (response.index === 4) {
-    const clone = document.getElementById("stackedarea").cloneNode(true);
-    container.firstChild.remove();
-    container.appendChild(clone);
+    create_stackedarea();
   } else if (response.index === 5) {
-    const clone = document.getElementById("line").cloneNode(true);
-    container.firstChild.remove();
-    container.appendChild(clone);
+    create_line();
   }
 }
 
-// make sure the graphic is sticky on the right
-function setupStickyfill() {
-  d3.selectAll(".chart").each(function () {
-    Stickyfill.add(this);
-  });
-}
-
 function init() {
-  setupStickyfill();
-  // 1. force a resize on load to ensure proper dimensions are sent to scrollama
-  const clone = document.getElementById("map").cloneNode(true);
-  container.firstChild.remove();
-  container.appendChild(clone);
-  // 2. setup the scroller passing options
-  // 		this will also initialize trigger observations
+  handleResize();
+
+  d3.select("body")
+    .append("div")
+    .attr("class", "svg-tooltip")
+    .style("position", "absolute")
+    .style("visibility", "hidden");
+
+  //   create_map();
   // 3. bind scrollama event handlers (this can be chained like below)
   scroller
     .setup({
       step: ".section-container .text-container .step",
-      offset: 0.5,
+      offset: 0.7,
       debug: false,
     })
     .onStepEnter(handleStepEnter);
+
+  handleResize();
 }
 
 // kick things off

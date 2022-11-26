@@ -14,14 +14,17 @@ a {
   color: #b15928;
 }
 
+p {
+  font-size: 18px;
+}
+
 h1 {
-  font-size: 48px;
-  text-align: center;
-  margin: 50px 0px 0px 0px;
+  font-size: 52px;
+  margin: 100px 0px 0px 175px;
 }
 
 h2 {
-  font-size: 24px;
+  font-size: 20px;
   margin: 0 auto;
   width: 1300px;
   padding-top: 80px;
@@ -38,13 +41,14 @@ h3 {
 
 /* Heading part */
 #headline {
-  text-align: center;
+  margin-left: 195px;
 }
 
 .introduction {
-  margin: 0 auto;
-  width: 1300px;
-  padding-top: 10px;
+  margin-top: 50px;
+  margin-left: 175px;
+  width: 800px;
+  padding-top: 5px;
 }
 
 /* Main part */
@@ -52,6 +56,8 @@ h3 {
 .section-container {
   width: 1300px;
   margin: 0 auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
   padding-top: 90px;
   position: relative;
   display: -webkit-box;
@@ -82,24 +88,8 @@ h3 {
   height: 75vh;
 }
 
-/* .chart-container .chart {
-  position: relative;
-  opacity: 0;
-  z-index: -1;
-}
-
-.chart-container .chart.is-active {
-  position: relative;
-  opacity: 1;
-  z-index: 1;
-} */
-
-.hidden-chart {
-  position: absolute;
-  visibility: hidden;
-}
-
 .step {
+  margin-top: 30px;
   opacity: 0;
 }
 
@@ -109,20 +99,21 @@ h3 {
 
 /* Each chart part */
 
-#row1 {
-  column-count: 2;
+.row1 {
+  column-count: 3;
   margin-bottom: 50px;
 }
 
-#legend {
-  margin: 0px;
+.legend {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
-#legend svg {
-  margin: 0px;
+.legend svg {
+  margin-left: 20px;
 }
 
-#scatter .y-axis line {
+.scatter .y-axis line {
   stroke: #bdbdbd; /* change grid line */
 }
 
@@ -137,8 +128,18 @@ foreignObject p {
 }
 
 .chart-title {
-  font-size: 20px;
+  font-size: 16px;
   margin-bottom: 20px;
+}
+
+.stackedarea-each,
+.line-each {
+  font-size: 14px;
+}
+
+#line-chart-title {
+  font-size: 16px;
+  margin-bottom: 40px;
 }
 
 /* Interactive part */
@@ -152,9 +153,7 @@ foreignObject p {
   fill: steelblue;
 }
 
-.svg-tooltip,
-.svg-tooltip2,
-.svg-tooltip3 {
+.svg-tooltip {
   background: rgba(69, 77, 93, 0.9);
   border-radius: 5px;
   color: #fff;
@@ -169,8 +168,4 @@ foreignObject p {
   white-space: pre;
   z-index: 300;
   visibility: hidden;
-}
-
-.svg-tooltip2 {
-  max-width: 520px;
 }
