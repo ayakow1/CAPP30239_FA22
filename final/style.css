@@ -25,14 +25,16 @@ h1 {
 
 h2 {
   font-size: 20px;
-  margin: 0 auto;
-  width: 1300px;
-  padding-top: 80px;
 }
 
 h3 {
   margin: 0;
   padding: 0;
+}
+
+ol,
+ul {
+  margin-left: 175px;
 }
 
 .domain {
@@ -49,6 +51,11 @@ h3 {
   margin-left: 175px;
   width: 800px;
   padding-top: 5px;
+}
+
+#headline a {
+  color: black;
+  text-decoration: none;
 }
 
 /* Main part */
@@ -75,7 +82,7 @@ h3 {
 
 .text-container {
   position: relative;
-  width: 30%;
+  width: 50%;
 }
 
 #chart-container {
@@ -84,17 +91,17 @@ h3 {
   top: 0;
   width: 100%;
   z-index: 1;
-  top: 12.5vh;
+  top: 8.5vh;
   height: 75vh;
 }
 
 .step {
-  margin-top: 30px;
-  opacity: 0;
+  opacity: 1;
 }
 
-.step.is-active {
-  opacity: 1;
+.step h2 {
+  font-size: 24px;
+  margin-top: 50px;
 }
 
 /* Each chart part */
@@ -142,6 +149,10 @@ foreignObject p {
   margin-bottom: 40px;
 }
 
+#annotation2 p {
+  font-size: 16px;
+}
+
 /* Interactive part */
 
 .highlight path {
@@ -168,4 +179,28 @@ foreignObject p {
   white-space: pre;
   z-index: 300;
   visibility: hidden;
+}
+
+/* Conclusion part */
+.source {
+  margin-left: 195px;
+  padding-top: 5px;
+}
+
+.section-title {
+  margin: 0 auto;
+  width: 1300px;
+  padding-top: 80px;
+}
+
+.section-title2 {
+  margin: 0 auto;
+  width: 1300px;
+  padding-top: 20px;
+}
+
+.building {
+  margin-left: 195px;
+  width: 1300px;
+  padding-top: 5px;
 }

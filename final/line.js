@@ -12,7 +12,9 @@ function create_line() {
 
     d3.select(".linechart")
       .append("div")
-      .html(`<h3>ACTUAL VS PROJECTED POPULATION AND FERTILITY RATE</h3>`)
+      .html(
+        `<h3>ACTUAL VS PROJECTED POPULATION AND FERTILITY RATE <sup><a href="#t6">6</a></sup></h3>`
+      )
       .attr("id", "line-chart-title");
 
     const timeParse = d3.timeParse("%Y");

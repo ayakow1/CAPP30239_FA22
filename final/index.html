@@ -11,6 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600&family=Slabo+27px&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -18,125 +19,345 @@
       <!-- Introduction Part -->
       <h1>Shrinking Population of Japan</h1>
       <!-- TODO: Add articles, update css layout, consider accessibility, enable highligh in line-chart.  -->
-      <p id="headline">December 5, 2022, by Ayako Watanabe</p>
-      <!-- <h2>Introduction</h2> -->
+      <p id="headline">December 5, 2022, by Ayako Watanabe <a href="https://github.com/ayakow1/CAPP30239_FA22/tree/main/final" class="fa fa-github" style="font-size:16px"></a></p>
       <p class="introduction">
          According to
-        <a href="https://www.ipss.go.jp/pp-shicyoson/j/shicyoson18/t-page.asp"
-          >the National Institute of Population and Social Security Research</a
+        <a href="https://www.ipss.go.jp/pp-zenkoku/e/zenkoku_e2017/pp_zenkoku2017e.asp"
+          >Population Projection oj Japan (2017)</a
         >, <b>15%</b> of the population of Japan is projected to decrease
-        significantly and the number of people above 60 years old will be
-        <b>43%</b> by 2045. The main reasons are the declining fertility rate
-        and closed policy for immigrants.
+        significantly, and the number of people above 60 years old will be
+        <b>43%</b> by 2045. The main reasons are the closed policy for immigrants
+        and the declining fertility rate.
         <br>
         <br>
-         In an effort to address this issue, we visualize the trends of
-        demographic shift and examine why this projection is reasonable. Scroll
-        down to learn more.
+        In order to address this issue, we visualize the trends of the demographic 
+        shift and examine why this projection is reasonable. Scroll down to learn more.
       </p>
     </section>
     <!-- Chart Part -->
     <section class="section-container">
       <div class="text-container">
         <div class="step is-active" data-step="0">
-          <h2>Population will decrease relative to 2020</h2>
-          <p>
-            Data source: Regional Population Projections for Japan: 2015–2045
-            from
-            <a
-              href="https://www.ipss.go.jp/pp-shicyoson/j/shicyoson18/t-page.asp"
-              >[The National Institute of Population and Social Security
-              Research]</a
-            >
+          <h2>The population will dramatically decrease by 2045</h2>
+          <p>Based on the population projection in 2017 for 47 prefectures, 
+            all areas except for Tokyo and Okinawa will experience a population decline after 2020. 
+            Japan's capital and largest city, Tokyo, maintains its population by absorbing people from other areas. 
+            The southernmost prefecture, Okinawa, is an exceptional prefecture with a high fertility rate and an 
+            inflow of immigrants from foreign countries.
+            <br>
+            <br>
+            However, the population in Tokyo and Okinawa will also decrease by 2045. 
+            In 2045, the population decrease rate compared to 2020 is 15% for the country average. 
+            Akita, located in the northern region of Japan, has the nation's highest drop rate (37%), while Tokyo has the lowest (1%). 
+            <br>
+            <br>
+            The shrinking of the population is likely to widen the economic and demographic gaps 
+            between rural and city areas.
           </p>
         </div>
         <div class="step" data-step="1">
           <h2>Japan will become a super-aging country</h2>
-          <p>
-            Data source: Regional Population Projections for Japan: 2015–2045
-            from
-            <a
-              href="https://www.ipss.go.jp/pp-shicyoson/j/shicyoson18/t-page.asp"
-              >[The National Institute of Population and Social Security
-              Research]</a
-            >
+          <p>The problem resides not only in the total population but also in the demographic age composition. 
+            Japan is already known for having the world's highest percentage of older people. 
+            The population projection indicates that this trend will accelerate even more.
+            <br>
+            <br>
+            Comparing the number of people between 2020 and 2045 by age groups, 
+            we will notice that the significant decrease in young people contributes 
+            to a higher percentage of people above 60, from 34.8% in 2020 to 43.4% in 2045.
+            <br>
+            <br>
+            The consequences of the super-aging society are unpredictable, 
+            as they have never happened in human history. 
+            For example, the current tax and social security systems designed to 
+            redistribute wealth from the working-age generation to the old generation are at risk. 
+            Besides, the increasing workforce shortage will hamper economic growth even more.
+            <br>
+            <br>
+            Next, we will discuss two significant factors - 
+            immigration and fertility rate  - which determine population growth. 
+            <br>
+            <br>
           </p>
         </div>
         <div class="step" data-step="2">
-          <h2>People are moving to Tokyo area</h2>
+          <h2>Few immigrants in Japan</h2>
           <p>
-            Data source: Number of Net-migration by Age and Sex for Prefectures
-            from
-            <a
-              href="https://www.e-stat.go.jp/en/stat-search/files?page=1&layout=datalist&toukei=00200523&tstat=000000070001&cycle=7&year=20210&month=0&tclass1=000001148746&stat_infid=000032163826&result_back=1&tclass2val=0"
-              >[Report on Internal Migration in Japan]</a
-            >
+            Japan has fewer foreign residents than other OECD countries due to a historic 
+            closed-form immigration policy. Pressured by a labor shortage in several industries, 
+            the Japanese government recently reformed its immigration policy to attract new foreign workers. 
+            <a href="https://www.stat.go.jp/info/today/pdf/180.pdf">The Population Census (2020)</a> reported 
+            that the foreign population has increased by 43.6% from 2015 to 2020.
+            <br>
+            <br>
+            However, there is little room for optimism. The foreign population still accounts for a small proportion 
+            of the total population (1.9% in 2020). The population projection in 2017 estimates that Japan needs an 
+            influx of 750,000 immigrants per year to avoid population shrinkage. 
+            Nevertheless, Japan's latest migration inflow was 85,000 
+            (<a href="https://www.oecd-ilibrary.org/social-issues-migration-health/international-migration-outlook-2022_30fe16d2-en">
+            OECD's International Migration Outlook 2022</a>). 
+            <br>
+            <br>
+            Therefore, unless something unexpected happens, the future of Japan's population heavily relies 
+            on current Japanese nationals. 
+            <br>
+            <br>
           </p>
         </div>
         <div class="step" data-step="3">
-          <h2>Fertility rates are low at Tokyo area where prices are high</h2>
+          <h2>Fertility rates are low in Tokyo area</h2>
           <p>
-            Data source: Prefectural income per person, Fertility rate, and Net
-            migration by Prefecutres in 2017 from
-            <a
-              href="https://www.e-stat.go.jp/en/stat-search/files?page=1&layout=datalist&toukei=00450011&tstat=000001028897&cycle=7&year=20200&month=0&tclass1=000001053058&tclass2=000001053061&tclass3=000001053064&stat_infid=000032118531&result_back=1&tclass4val=0"
-              >[Vital Statistics]</a
-            >,
-            <a
-              href="https://www.e-stat.go.jp/en/stat-search/files?page=1&layout=datalist&toukei=00200502&tstat=000001162826&cycle=0&year=20220&month=0&tclass1=000001162827&stat_infid=000032169057&tclass2val=0"
-              >[System of Social and Demographic Statistics]</a
-            >,
-            <a href="https://www.e-stat.go.jp/en/dbview?sid=0003211022"
-              >[Report on Internal Migration in Japan in 2017]</a
-            >
+            The total fertility rate (TFR) is the average number of children per woman aged 15-49. 
+            In 2017, Japan's fertility rate was 1.43, below the 
+            <a href="https://data.oecd.org/pop/fertility-rates.htm">OECD countries' average (1.66)</a>. 
+            <br>
+            <br>
+            The low fertility rate is typical in urbanized countries. This trend can be observed even within a nation. 
+            Among Japan's three major metropolitan areas (Tokyo, Osaka, Nagoya) <sup>*</a></sup>, 
+            the Tokyo area is the largest metropolitan with least birth rate. Conversely, 
+            prefectures not in metropolitan areas generally have higher fertility rates than the national average.
+            <br>
+            <br>
+            We plotted the relationship between the fertility rate and the price index on the right-hand side. 
+            The price index is one of the indicators of urbanization. We can notice its negative correlation 
+            with the birth rate. This chart does not necessarily indicate the economic reason is the cause of 
+            the falling fertility rate. Still, there should be some social and economic factors in cities that 
+            make people reluctant to have many children. 
+            <br>
+            <br>
+            <small><sup>*</a></sup> Tokyo area (Tokyo, Kanagawa, Saitama, Chiba), Nagoya area (Aichi, Gifu, Mie), 
+                and Osaka area (Osaka, Hyogo, Kyoto, Nara). All prefectures are included in other area. </small>
           </p>
         </div>
         <div class="step" data-step="4">
+          <h2>People are moving to Tokyo area</h2>
+          <p>
+            One factor contributing to the lower fertility rate is overpopulation in the Tokyo area. 
+            Over the past decades, Tokyo has absorbed people from rural areas as it long serves as 
+            an economic, cultural, and political hub.
+            <br>
+            <br>
+            As we saw in the last scatter plot, the Tokyo area had a lower fertility rate than any other 
+            region in Japan. Therefore, the more women move to Tokyo, the fewer children are expected. 
+            Furthermore, as the first choropleth maps showed, prefectures other than Tokyo (and Okinawa) 
+            are estimated to drop their population. If the economic or demographic gaps continue to widen, 
+            it will be increasingly challenging to reverse this migration trend.
+            <br>
+            <br>
+            Then, a certain question arises. Do people not wish to have more children as they decide to move to Tokyo? 
+            If they do not want more kids, Japan should start thinking of a way to live with a small population. 
+            However, it turns out people are actually hoping to have more babies; Japan's desired fertility rate 
+            <sup>*</a></sup> is 1.8, much higher than the actual fertility rate (1.43). 
+            <br>
+            <br>
+            <small><sup>*</a></sup> <a href="https://www8.cao.go.jp/shoushi/shoushika/whitepaper/measures/english/w-2016/pdf/part1_2-1.pdf">
+                “Desired birthrate” is defined as the birthrate calculated on assumption that young people can 
+                fulfill their desires above as well as in some conditions.</a></small>
+        </p>
+        </div>
+        <div class="step" data-step="5">
           <h2>
             Wives are more engaged in household activities and child care than
             their husbands
           </h2>
           <p>
-            Data source: Participation rate of a married couple in activities by
-            Time division, Sex, Age of own youngest child, Kind of activities
-            from
-            <a
-              href="https://www.e-stat.go.jp/en/stat-search/files?page=1&layout=datalist&toukei=00200533&tstat=000001158160&cycle=0&year=20210&month=0&tclass1=000001158164&tclass2=000001158180&tclass3=000001158184&tclass4val=0"
-              >[Survey on Time Use and Leisure Activities]</a
-            >
+            Japan's gender role expectation is one of the reasons to prevent women from having children. 
+            According to the <a href="https://www.weforum.org/reports/global-gender-gap-report-2022/">Gender gap report (2022)</a>, 
+            Japan ranks 116th out of 146 countries. 
+            <br>
+            <br>
+            Over the generation, the number of working women has been increasing due to 
+            social and economical reasons. 
+            Nevertheless, Japan's traditional women's role in caring for their family 
+            and household work remains influential. 
+            <br>
+            <br>
+            The right-hand side chart is based on a survey of how married couples with 
+            children spend one day. Even in both-working cases, wives spend more time on 
+            household activities and child care than their husbands. As their child gets 
+            older, the amount of time for family remains unchanged, substituting child care 
+            with household activities. Feel free to use radio buttons to change the woman's 
+            working status and the age of the last child.
+            <br>
+            <br>
+            Without having enough support for raising children from men or the government, 
+            women face challenges in pursuing both working and having desired family styles, 
+            including the number of children. 
           </p>
         </div>
-        <div class="step" data-step="5">
+        <div class="step" data-step="6">
+          <p>
+            <br>
+            <br>
+            <br>
+            <br>
+          </p>
           <h2>How reliable are the projections?</h2>
           <p>
-            Data source: Historical Total Population Projections from
-            <a href="https://www.ipss.go.jp/index-e.asp"
-              >[The National Institute of Population and Social Security
-              Research]</a
-            >
-            and Actual Population from
-            <a
-              href="https://www.e-stat.go.jp/en/stat-search/files?page=1&layout=datalist&toukei=00200524&tstat=000000090001&cycle=0&tclass1=000000090004&tclass2=000001051180&stat_infid=000013168601&cycle_facet=tclass1%3Acycle&tclass3val=0"
-              >[Population Estimates / Time Series]</a
-            >. Historical Fertility Rate Projection from
-            <a href="https://www.ipss.go.jp/index-e.asp"
-              >[The National Institute of Population and Social Security
-              Research]</a
-            >
-            and Actual Fertility rate from
-            <a
-              href="https://www.mhlw.go.jp/toukei/saikin/hw/jinkou/kakutei21/index.html"
-              >[Vital Statistics]</a
-            >.
+            So far, we have discussed the population decline based on the estimates from the population projection 
+            conducted in 2017. However, we did not examine the appropriateness of projection itself. 
+            Lastly, we compare the actual data to past population projections to see the reliability of past predictions.
+            <br>
+            <br>
+            The bold line is the actual data, and the dashed lines are projections released each year 
+            (1997, 2002, 2006, 2012, 2017). The above chart shows the actual population slightly outperformed the past estimates, 
+            but the declining trend seems to have started as anticipated. The chart below displays the actual fertility rates 
+            and those estimated and used as assumptions to derive population predictions. The fertility rate slightly 
+            improved from 2005 to 2015 but declined again recently.
+            <br>
+            <br>
+            Hence, Japan's falling population seems inevitable, at least for the near future. 
+            As we mentioned before, we cannot fully prospect what will happen in the shrinking population society. 
+            The Japanese government is attempting to take action from both sides, increase the population 
+            and prepare for a super-aging society. Although Japan will be the first to tackle this issue, 
+            some other developed nations will follow a similar trend. As 
+            <a href="https://www.imf.org/en/Publications/fandd/issues/2020/03/shrinkanomics-policy-lessons-from-japan-on-population-aging-schneider">experts at IMF</a>
+             argues, Japan will be a "world's laboratory" for the aging and contracting population. 
           </p>
         </div>
       </div>
       <div id="chart-container"></div>
     </section>
     <!-- Conclusion Part -->
-    <section id="Conclusion">
-      <h2>Data Sources</h1>
-      <h2>Building Process</h1>
+    <section id="conclusion">
+      <h2 class="section-title">Sources</h2>
+        <p class="source">Data: </p>
+        <div>
+            <ol>
+                <li id="t1">
+                    Population Projections for Japan by prefecture, age, and gender from
+                    <a
+                    href="https://www.ipss.go.jp/pp-shicyoson/j/shicyoson18/t-page.asp"
+                    >[Regional Population Projections for Japan: 2015-2045 (2018)]</a>. Used Medium-fertility (medium-mortality) projection. 
+                </li>
+                <li id="t2">
+                    Population by Sex and Nationality from 
+                    <a href="https://www.e-stat.go.jp/en/stat-search/files?page=1&layout=datalist&toukei=00200521&tstat=000001136464&cycle=0&year=20200&month=24101210&tclass1=000001136466">
+                    [Population Census 2020]
+                    </a>.
+                </li>
+                <li id="t3">
+                    Prefectural income per person, Fertility rate, and Net
+                    migration by Prefecutres in 2017 from
+                    <a
+                    href="https://www.e-stat.go.jp/en/stat-search/files?page=1&layout=datalist&toukei=00450011&tstat=000001028897&cycle=7&year=20200&month=0&tclass1=000001053058&tclass2=000001053061&tclass3=000001053064&stat_infid=000032118531&result_back=1&tclass4val=0"
+                    >[Vital Statistics]</a
+                    >,
+                    <a
+                    href="https://www.e-stat.go.jp/en/stat-search/files?page=1&layout=datalist&toukei=00200502&tstat=000001162826&cycle=0&year=20220&month=0&tclass1=000001162827&stat_infid=000032169057&tclass2val=0"
+                    >[System of Social and Demographic Statistics]</a
+                    >, and 
+                    <a href="https://www.e-stat.go.jp/en/dbview?sid=0003211022"
+                    >[Report on Internal Migration in Japan in 2017]</a
+                    >.
+                </li>
+                <li id="t4">
+                    Number of Net-migration by Age and Sex for Prefectures
+                    from
+                    <a
+                    href="https://www.e-stat.go.jp/en/stat-search/files?page=1&layout=datalist&toukei=00200523&tstat=000000070001&cycle=7&year=20210&month=0&tclass1=000001148746&stat_infid=000032163826&result_back=1&tclass2val=0"
+                    >[Report on Internal Migration in Japan]</a>.
+                </li>
+                <li id="t5">
+                    Participation rate of a married couple in activities by
+                    Time division, Sex, Age of own youngest child, Kind of activities
+                    from
+                    <a
+                    href="https://www.e-stat.go.jp/en/stat-search/files?page=1&layout=datalist&toukei=00200533&tstat=000001158160&cycle=0&year=20210&month=0&tclass1=000001158164&tclass2=000001158180&tclass3=000001158184&tclass4val=0"
+                    >[Survey on Time Use and Leisure Activities]</a
+                    >.
+                </li>
+                <li id="t6">
+                    Historical Total Population Projections from
+                    <a href="https://www.ipss.go.jp/site-ad/index_english/population-e.html"
+                    >[Population Projections for Japan]</a
+                    >
+                    and Actual Population from
+                    <a
+                    href="https://www.e-stat.go.jp/en/stat-search/files?page=1&layout=datalist&toukei=00200524&tstat=000000090001&cycle=0&tclass1=000000090004&tclass2=000001051180&stat_infid=000013168601&cycle_facet=tclass1%3Acycle&tclass3val=0"
+                    >[Population Estimates / Time Series]</a
+                    >. 
+                    <br>
+                    Historical Fertility Rate Projection from
+                    <a href="https://www.ipss.go.jp/site-ad/index_english/population-e.html"
+                    >[Population Projections for Japan]</a
+                    >
+                    and Actual Fertility rate from
+                    <a
+                    href="https://www.mhlw.go.jp/toukei/saikin/hw/jinkou/kakutei21/index.html"
+                    >[Vital Statistics]</a
+                    >.
+                </li>
+            </ol>
+        </div>
+
+        <p class="source">Codes: </p>
+        <div>
+            <ul>
+                <li>
+                    <a href="https://github.com/tiffanyfrance/CAPP30239_FA22">CAPP30239 FA22 github</a> by Tiffany France
+                </li>
+                <li>
+                    <a href="https://d3-snippets-cap20239-fa22.netlify.app">D3 Snippets for CAPP30239 FA22</a> by Sandy Ng
+                </li>
+                <li>
+                    <a href="https://d3-graph-gallery.com">D3 Graph Gallery</a>
+                </li>
+                <li>
+                    <a href="https://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3">Color Brewer 2.0</a>
+                </li>
+                <li>
+                    <a href="https://observablehq.com/@d3/color-legend">Observable's Color Legend</a>
+                </li>                
+                <li>
+                    <a href="https://github.com/russellsamora/scrollama">Scrollama</a>
+                </li>
+            </ul>
+        </div>
+
+      <h2 class="section-title2">Building Process</h2>
+        <p class="building">
+           <b>Data collecting: </b> I could quickly identify the data sources based on my experience working 
+           in the Japanese government. However, since most of the data are available in .xlsx files, 
+           it took time to convert to Python-friendly format.
+           <br>
+           <b>Data cleaning: </b> I struggled to figure out what kind of data structure is useful in D3.js. 
+           I ended up changing the data structures for each chart based on available examples.
+           <br>
+           <b>Chart building: </b> First, I drew choropleth maps because it is visually appealing to show 
+           how dramatically the population will decrease in each area. 
+           Second, I chose a (Cleveland) dot plot instead of a bar chart to show the histogram of the population 
+           in each category (age) because it is more straightforward and able to reduce data-ink to compare 
+           the data points in two years (2020 and 2045). 
+           Third, I used a ring chart to show the percentage of foreign residents in Japan's total population. 
+           Since there are only three categories, the ring chart is relatively easy to compare the proportion 
+           of each element. 
+           Forth, I implemented a scatter plot to examine the correlation between the price index and the fertility rate. 
+           I also made use of colors and symbols to show the area categories. Fifth, I made an area chart to plot 
+           the time trend of net migration. I filled the areas between the x-axis and the lines with colors because 
+           they could emphasize the volume of migrations. Sixth, I built stacked-area charts inspired by Amanda Cox's work 
+           (<a href="https://us.gestalten.com/blogs/journal/visualizing-a-new-new-york-times">How employed and unemployed spend their day?</a>). 
+           I added radio buttons to be able to switch the chart interactively. 
+           At last, I plotted multi-line graphs to compare the time-trend of population and fertility rate in each category.
+           <br>
+           <b>Putting together: </b> Probably the most challenging part was to lay out all the charts in one article. 
+           I used a sticky CSS layout with the scrollama library to align text and charts next to each other. 
+           This way, the readers can focus on each chart and refer to the text. It was difficult to understand the 
+           CSS layout syntax and its hierarchical structure. 
+           <br>
+           <b>Limitation: </b> This project is mainly based on data in 2017. I could not reflect the post-COVID-19 
+           projection as it is not available yet. Since the pandemic is likely to have deterred people's decision to having children, 
+           the next projection is expected to have worse results. Another limitation is that I could not improve 
+           the web accessibility enough. For example, the stacked-area chart had to use various colors to 
+           represent 12 categories. Therefore, it was difficult to make appropriate contrast ratio. To reduce data-ink, 
+           I also made use of tooltips, which may be inaccessible for people who use screen readers. 
+           <br>
+           <br>
+           Through this project, I learned how flexible D3.js is, allowing me to draw charts precisely as I wished. 
+           It was also an excellent opportunity to learn web development with HTML/CSS. Last but not least, 
+           plenty of beautiful data visualization I saw in the class motivated me to achieve this project. 
+           I appreciate professor Tiffany France and Sandy Ng for all their support.
+        </p>
     </section>
 
     <script src="https://d3js.org/d3.v7.min.js"></script>
@@ -145,6 +366,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
     <script src="map.js"></script>
     <script src="dot.js"></script>
+    <script src="ring.js"></script>
     <script src="area.js"></script>
     <script src="scatter.js"></script>
     <script src="stackedarea.js"></script>

@@ -14,7 +14,7 @@ function create_dot() {
 
     d3.select("#chart-container")
       .append("div")
-      .html(`<h3>POPULATION CHANGE BY AGE</h3>`)
+      .html(`<h3>POPULATION CHANGE BY AGE <sup><a href="#t1">1</a></sup></h3>`)
       .attr("class", "chart-title");
 
     const svg = d3

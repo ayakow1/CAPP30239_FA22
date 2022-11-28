@@ -59,7 +59,9 @@ function create_stackedarea() {
 
     d3.select("#area-container")
       .append("div")
-      .html(`<h3>PROPORTION OF WIVES AND HUSBANDS SPENDING IN ACTIONS</h3>`)
+      .html(
+        `<h3>PROPORTION OF WIVES AND HUSBANDS SPENDING IN ACTIONS <sup><a href="#t5">5</a></sup></h3>`
+      )
       .attr("class", "chart-title");
 
     document.getElementById("area-container").innerHTML += `<div id="radio">
@@ -240,7 +242,6 @@ function create_stackedarea() {
               return enter.append("path").attr("class", "stackedarea");
             })
             .transition()
-            .duration(500)
             .attr(
               "d",
               d3

@@ -9,7 +9,9 @@ function create_area() {
 
     d3.select("#chart-container")
       .append("div")
-      .html(`<h3>NUMBER OF MIGRATION BY AREA</h3>`)
+      .html(
+        `<h3>NUMBER OF NET MIGRATION WITHIN COUNTRY <sup><a href="#t4">4</a></sup></h3>`
+      )
       .attr("class", "chart-title");
 
     const svg = d3
@@ -136,7 +138,7 @@ function create_area() {
       .append("text")
       .attr("x", width - 75)
       .attr("y", 75)
-      .text("Regions")
+      .text("Other area")
       .style("font-size", "8px")
       .attr("alignment-baseline", "middle");
 

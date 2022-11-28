@@ -1,4 +1,5 @@
-// import { create_map } from "map.js";
+/* Construct sticky layout
+    Reference: https://pudding.cool/process/introducing-scrollama/ */
 
 // using d3 for convenience
 var scrolly = d3.select(".section-container");
@@ -31,13 +32,6 @@ function handleResize() {
 function handleStepEnter(response) {
   // response = { element, direction, index }
 
-  step.classed("is-active", false);
-  // add color to current step only
-  step.classed("is-active", function (d, i) {
-    return i === response.index;
-  });
-
-  console.log(response.index);
   while (container.firstChild) {
     container.removeChild(container.firstChild);
   }
@@ -48,13 +42,15 @@ function handleStepEnter(response) {
     create_map();
   } else if (response.index == 1) {
     create_dot();
-  } else if (response.index === 2) {
-    create_area();
+  } else if (response.index == 2) {
+    create_ring();
   } else if (response.index === 3) {
     create_scatter();
   } else if (response.index === 4) {
-    create_stackedarea();
+    create_area();
   } else if (response.index === 5) {
+    create_stackedarea();
+  } else if (response.index === 6) {
     create_line();
   }
 }

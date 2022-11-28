@@ -18,7 +18,9 @@ function create_map() {
 
     d3.select(".map")
       .append("div")
-      .html(`<h3>POPULATION CHANGE RATE BY AREA</h3>`)
+      .html(
+        `<h3>POPULATION CHANGE RATE BY AREA <sup><a href="#t1">1</a></sup></h3>`
+      )
       .attr("class", "chart-title");
 
     d3.select(".map")
@@ -61,7 +63,7 @@ function create_map() {
       .html(`<h3>${year}</h3>`)
       .attr("class", "map-each")
       .append("svg")
-      .attr("viewBox", [0, 0, width, height]);
+      .attr("viewBox", [70, 30, width - 150, height - 20]);
 
     svg
       .append("g")

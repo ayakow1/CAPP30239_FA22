@@ -8,7 +8,9 @@ function create_scatter() {
 
     d3.select("#chart-container")
       .append("div")
-      .html(`<h3>RELATIONSHIP BETWEEN FERTILITY RATE AND PRICE INDEX</h3>`)
+      .html(
+        `<h3>RELATIONSHIP BETWEEN FERTILITY RATE AND PRICE INDEX (2017) <sup><a href="#t3">3</a></sup></h3>`
+      )
       .attr("class", "chart-title");
 
     const svg = d3
@@ -137,7 +139,7 @@ function create_scatter() {
         return height / 5 + i * 20 + size / 2;
       }) // 100 is where the first dot appears. 25 is the distance between dots
       .text(function (d) {
-        return `${d} area`;
+        return d === "Regions" ? `Other area` : `${d} area`;
       })
       .attr("text-anchor", "left")
       .style("alignment-baseline", "middle");
@@ -156,11 +158,11 @@ function create_scatter() {
       .append("text")
       .attr("class", "y-label")
       .attr("text-anchor", "end")
-      .attr("x", -margin.top / 2)
+      .attr("x", -margin.top / 2 - 30)
       .attr("dx", "-0.5em")
       .attr("y", 25)
       .attr("transform", "rotate(-90)")
-      .text("Fertility Rate");
+      .text("Fertility Rate (TFR)");
 
     svg
       .append("line")
@@ -182,5 +184,46 @@ function create_scatter() {
       .style("text-anchor", "start")
       .text("National Average Price")
       .style("fill", "red");
+
+    svg
+      .append("line")
+      .attr("x1", margin.left)
+      .attr("y1", y(1.43))
+      .attr("x2", width - margin.right)
+      .attr("y2", y(1.43))
+      .style("stroke-width", 0.5)
+      .style("stroke", "red")
+      .style("fill", "none");
+
+    svg
+      .append("text")
+      .attr("class", "y-label")
+      .attr("text-anchor", "start")
+      .attr("x", width - margin.right - 120)
+      .attr("y", y(1.43) - 5)
+      .style("text-anchor", "start")
+      .text("National Average Fertility rate")
+      .style("fill", "red");
+
+    // annotations
+    svg
+      .append("text")
+      .attr("class", "x-label")
+      .attr("text-anchor", "end")
+      .attr("x", margin.left + 153)
+      .attr("y", margin.top + 27)
+      .attr("dx", "0.5em")
+      .attr("dy", "-0.5em")
+      .text("Okinawa");
+
+    svg
+      .append("text")
+      .attr("class", "x-label")
+      .attr("text-anchor", "start")
+      .attr("x", width - margin.right - 30)
+      .attr("y", height - margin.bottom)
+      .attr("dx", "0.5em")
+      .attr("dy", "-0.5em")
+      .text("Tokyo");
   });
 }
