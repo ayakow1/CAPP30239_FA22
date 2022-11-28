@@ -69,7 +69,7 @@ function init() {
   scroller
     .setup({
       step: ".section-container .text-container .step",
-      offset: 0.7,
+      offset: 0.8,
       debug: false,
     })
     .onStepEnter(handleStepEnter);
