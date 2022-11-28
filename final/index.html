@@ -324,25 +324,26 @@
            <b>Data cleaning: </b> I struggled to figure out what kind of data structure is useful in D3.js. 
            I ended up changing the data structures for each chart based on available examples.
            <br>
-           <b>Chart building: </b> First, I drew choropleth maps because it is visually appealing to show 
+           <b>Chart building: </b> First, I drew choropleth maps because it is visually appealing to see 
            how dramatically the population will decrease in each area. 
            Second, I chose a (Cleveland) dot plot instead of a bar chart to show the histogram of the population 
-           in each category (age) because it is more straightforward and able to reduce data-ink to compare 
-           the data points in two years (2020 and 2045). 
+           in each category (age) as it is more clear and possible to reduce data-ink to compare 
+           the data points between two years (2020 and 2045). 
            Third, I used a ring chart to show the percentage of foreign residents in Japan's total population. 
-           Since there are only three categories, the ring chart is relatively easy to compare the proportion 
+           Since there are only three categories, the ring chart is relatively easy to observe the proportion 
            of each element. 
            Fourth, I implemented a scatter plot to examine the correlation between the price index and the fertility rate. 
-           I also made use of colors and symbols to show the area categories. Fifth, I made an area chart to plot 
-           the time trend of net migration. I filled the areas between the x-axis and the lines with colors because 
-           they could emphasize the volume of migrations. Sixth, I built stacked-area charts inspired by Amanda Cox's work 
+           I also made use of colors and symbols to show the area categories. 
+           Fifth, I made an area chart to plot the time trend of net migration. 
+           I filled the areas between the x-axis and the lines with colors because they could emphasize the volume of migrations. 
+           Sixth, I built stacked-area charts inspired by Amanda Cox's work 
            (<a href="https://us.gestalten.com/blogs/journal/visualizing-a-new-new-york-times">How employed and unemployed spend their day?</a>). 
            I added radio buttons to be able to switch the chart interactively. 
            At last, I plotted multi-line graphs to compare the time-trend of population and fertility rate in each category.
            <br>
            <b>Putting together: </b> Probably the most challenging part was to lay out all the charts in one article. 
            It was difficult to understand the CSS layout syntax and its hierarchical structure. 
-           I used a sticky CSS layout with the scrollama library to align text and charts next to each other. 
+           I used a sticky CSS layout with the scrollama library to align texts and graphs next to each other. 
            This way, the readers can focus on each chart and refer to the text. 
            <br>
            <b>Limitation: </b> This project is mainly based on the latest data from 2017. 
