@@ -88,7 +88,8 @@ ul {
   position: -webkit-sticky;
   position: sticky;
   width: 70%;
-  min-height: 600px;
+  min-height: 400px;
+  max-height: 1200px;
   z-index: 1;
   top: 8.5vh;
   height: 75vh;
@@ -187,7 +188,7 @@ foreignObject p {
   margin-left: 10%;
   min-width: 750px;
   max-width: 1300px;
-  padding-top: 120px;
+  padding-top: 50px;
 }
 
 .section-title2 {
