@@ -20,7 +20,7 @@ p {
 
 h1 {
   font-size: 52px;
-  margin: 100px 0px 0px 175px;
+  margin: 10% 0% 0% 10%;
 }
 
 h2 {
@@ -29,12 +29,11 @@ h2 {
 
 h3 {
   margin: 0;
-  padding: 0;
 }
 
 ol,
 ul {
-  margin-left: 175px;
+  margin-left: 12%;
 }
 
 .domain {
@@ -43,14 +42,14 @@ ul {
 
 /* Heading part */
 #headline {
-  margin-left: 195px;
+  margin-left: 12%;
 }
 
 .introduction {
-  margin-top: 50px;
-  margin-left: 175px;
-  width: 800px;
-  padding-top: 5px;
+  margin-top: 55px;
+  margin-left: 10%;
+  min-width: 400px;
+  max-width: 800px;
 }
 
 #headline a {
@@ -61,16 +60,16 @@ ul {
 /* Main part */
 
 .section-container {
-  width: 1300px;
-  margin: 0 auto;
-  margin-top: 100px;
-  margin-bottom: 100px;
-  padding-top: 90px;
+  min-width: 750px;
+  max-width: 1300px;
+  margin-left: 10%;
+  margin-top: 10%;
+  margin-bottom: 10%;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  column-gap: 40px;
+  column-gap: 8%;
 }
 
 .section-container > * {
@@ -82,42 +81,38 @@ ul {
 
 .text-container {
   position: relative;
-  width: 50%;
+  width: 30%;
 }
 
 #chart-container {
   position: -webkit-sticky;
   position: sticky;
-  top: 0;
-  width: 100%;
+  width: 70%;
+  min-height: 600px;
   z-index: 1;
   top: 8.5vh;
   height: 75vh;
 }
 
 .step {
-  margin-top: 150px;
+  margin-top: 20%;
+  min-height: 1200px;
   opacity: 1;
 }
 
 .step h2 {
   font-size: 24px;
-  margin-top: 50px;
 }
 
 /* Each chart part */
 
 .row1 {
   column-count: 3;
-  margin-bottom: 50px;
 }
 
 .legend {
   margin-top: 20px;
   margin-bottom: 20px;
-}
-
-.legend svg {
   margin-left: 20px;
 }
 
@@ -184,24 +179,28 @@ foreignObject p {
 
 /* Conclusion part */
 .source {
-  margin-left: 195px;
+  margin-left: 10%;
   padding-top: 5px;
 }
 
 .section-title {
-  margin: 0 auto;
-  width: 1300px;
+  margin-left: 10%;
+  min-width: 750px;
+  max-width: 1300px;
   padding-top: 120px;
 }
 
 .section-title2 {
-  margin: 0 auto;
+  margin-left: 10%;
   width: 1300px;
+  min-width: 750px;
+  max-width: 1300px;
   padding-top: 20px;
 }
 
 .building {
-  margin-left: 195px;
-  width: 1300px;
+  margin-left: 12%;
+  min-width: 750px;
+  max-width: 1300px;
   padding-top: 5px;
 }
