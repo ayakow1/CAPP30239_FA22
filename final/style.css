@@ -34,6 +34,7 @@ h3 {
 ol,
 ul {
   margin-left: 12%;
+  margin-right: 5%;
 }
 
 .domain {
@@ -43,11 +44,13 @@ ul {
 /* Heading part */
 #headline {
   margin-left: 12%;
+  margin-right: 5%;
 }
 
 .introduction {
   margin-top: 55px;
   margin-left: 10%;
+  margin-right: 5%;
   min-width: 400px;
   max-width: 800px;
 }
@@ -64,6 +67,7 @@ ul {
   max-width: 1300px;
   margin-left: 10%;
   margin-top: 10%;
+  margin-right: 5%;
   margin-bottom: 10%;
   position: relative;
   display: -webkit-box;
@@ -181,11 +185,13 @@ foreignObject p {
 /* Conclusion part */
 .source {
   margin-left: 10%;
+  margin-right: 5%;
   padding-top: 5px;
 }
 
 .section-title {
   margin-left: 10%;
+  margin-right: 5%;
   min-width: 750px;
   max-width: 1300px;
   padding-top: 50px;
@@ -193,7 +199,7 @@ foreignObject p {
 
 .section-title2 {
   margin-left: 10%;
-  width: 1300px;
+  margin-right: 5%;
   min-width: 750px;
   max-width: 1300px;
   padding-top: 20px;
@@ -201,6 +207,7 @@ foreignObject p {
 
 .building {
   margin-left: 12%;
+  margin-right: 5%;
   min-width: 750px;
   max-width: 1300px;
   padding-top: 5px;
