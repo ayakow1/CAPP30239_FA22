@@ -93,9 +93,9 @@ ul {
   position: sticky;
   width: 70%;
   min-height: 400px;
-  max-height: 1200px;
   z-index: 1;
-  top: 8.5vh;
+  top: 4.5vh;
+  bottom: 4.5vh;
   height: 75vh;
 }
 
@@ -150,6 +150,18 @@ foreignObject p {
   margin-bottom: 40px;
 }
 
+.linechart .prediction text {
+  visibility: hidden;
+}
+
+.linechart .prediction.highlight2 text {
+  visibility: visible;
+}
+
+.linechart .prediction.highlight2 path {
+  stroke-width: 1.5;
+}
+
 #annotation2 p {
   font-size: 16px;
 }
@@ -183,6 +195,10 @@ foreignObject p {
 }
 
 /* Conclusion part */
+#conclusion {
+  margin-top: 20%;
+}
+
 .source {
   margin-left: 10%;
   margin-right: 5%;

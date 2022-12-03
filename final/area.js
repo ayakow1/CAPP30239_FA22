@@ -1,11 +1,10 @@
-/* Area chart for migrations*/
+/* Area chart for migrations */
 
 function create_area() {
   d3.csv("../data/migration.csv").then((data) => {
     const height = 300,
       width = 600,
-      margin = { top: 25, right: 50, bottom: 35, left: 55 },
-      padding = 5;
+      margin = { top: 25, right: 50, bottom: 35, left: 55 };
 
     d3.select("#chart-container")
       .append("div")
@@ -25,6 +24,13 @@ function create_area() {
     }
 
     let locations = ["Tokyo", "Osaka", "Nagoya", "Regions"];
+
+    let color = {
+      Tokyo: "#fb9a99",
+      Nagoya: "#b2df8a",
+      Osaka: "#fdbf6f",
+      Regions: "#a6cee3",
+    };
 
     let x = d3
       .scaleTime()
@@ -52,13 +58,7 @@ function create_area() {
       .y0(y(0)) //start at base line
       .y1((d) => y(d.Value));
 
-    let color = {
-      Tokyo: "#fb9a99",
-      Nagoya: "#b2df8a",
-      Osaka: "#fdbf6f",
-      Regions: "#a6cee3",
-    };
-
+    // construct area chart for each location
     for (let location of locations) {
       let locationData = data.filter((d) => d.Location === location);
       let c = color[location];
@@ -142,25 +142,7 @@ function create_area() {
       .style("font-size", "8px")
       .attr("alignment-baseline", "middle");
 
-    //   svg
-    //     .append("text")
-    //     .attr("x", 15)
-    //     .attr("y", height - 3)
-    //     .text(
-    //       "Tokyo area (Tokyo, Kanagawa, Saitama, Chiba), Nagoya area (Aichi, Gifu, Mie), and Osaka area (Osaka, Hyogo, Kyoto, Nara). All others are included in Regions."
-    //     )
-    //     .style("font-size", "8px")
-    //     .attr("alignment-baseline", "left");
-
-    svg
-      .append("foreignObject") //put html annotation (more flexible than text)
-      .attr("class", "datasource")
-      .attr("x", 15)
-      .attr("y", height - 10)
-      .append("xhtml:div") //sth needed for browser
-      .append("p")
-      .html(`text`);
-
+    // Add axis labels
     svg
       .append("text")
       .attr("class", "x-label")

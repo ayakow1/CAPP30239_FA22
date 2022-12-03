@@ -1,3 +1,5 @@
+/* Line chart population/fertility projections */
+
 function create_line() {
   Promise.all([
     d3.csv("../data/prediction_line.csv"),
@@ -13,7 +15,7 @@ function create_line() {
     d3.select(".linechart")
       .append("div")
       .html(
-        `<h3>ACTUAL VS PROJECTED POPULATION AND FERTILITY RATE <sup><a href="#t6">6</a></sup></h3>`
+        `<h3>ACTUAL VS PAST PROJECTION FOR POPULATION AND FERTILITY RATE <sup><a href="#t6">6</a></sup></h3>`
       )
       .attr("id", "line-chart-title");
 
@@ -28,8 +30,8 @@ function create_line() {
       2017: "#fb9a99",
     };
 
-    createChart3(true);
-    createChart3(false);
+    createChart3(true); //chart for population
+    createChart3(false); //chart for fertility
 
     function createChart3(isPopulation) {
       const svg = d3
@@ -90,72 +92,102 @@ function create_line() {
         .attr("transform", "rotate(-90)")
         .text(isPopulation ? "Thousand People" : "Fertility rate");
 
-      createLine(isPopulation);
+      // Draw each line
+      let predictions = new Set();
 
-      function createLine(isPopulation) {
-        let predictions = new Set();
+      const data = isPopulation ? population : fertility;
 
-        const data = isPopulation ? population : fertility;
+      for (let d of data) {
+        d.YearParse = timeParse(d.Year);
+        d.value = +d.value;
+        predictions.add(d.variable);
+      }
 
-        for (let d of data) {
-          d.YearParse = timeParse(d.Year);
-          d.value = +d.value;
-          predictions.add(d.variable);
+      let line = d3
+        .line()
+        .defined((d) => d.value > 0) //deal with missing values
+        .x((d) => x(d.YearParse))
+        .y((d) => y(d.value));
+
+      for (let prediction of predictions) {
+        let predictionData = data.filter((d) => d.variable === prediction);
+
+        let g = svg.append("g").on("mouseover", function () {
+          // set/remove highlight class
+          // highlight class defined in html
+          d3.selectAll(".highlight2").classed("highlight2", false);
+          d3.select(this).classed("highlight2", true);
+        });
+
+        g.append("path")
+          .datum(predictionData)
+          .attr("fill", "none")
+          .attr("stroke", color[prediction])
+          .attr("d", line);
+
+        // For past projections add dashed lines
+        if (prediction != "Actual") {
+          g.attr("class", "prediction").attr("stroke-dasharray", "5,2");
         }
 
-        let line = d3
-          .line()
-          .defined((d) => d.value > 0) //deal with missing values
-          .x((d) => x(d.YearParse))
-          .y((d) => y(d.value));
+        // For actual data add bold lines
+        if (prediction === "Actual") {
+          g.attr("stroke-width", "1.5");
 
-        for (let prediction of predictions) {
-          let predictionData = data.filter((d) => d.variable === prediction);
-
-          if (prediction != "Actual") {
-            let g = svg
-              .append("g")
-              .attr("class", "prediction")
-              .append("path")
-              .datum(predictionData)
-              .attr("fill", "none")
-              .attr("stroke", color[prediction])
-              .attr("d", line)
-              .attr("stroke-dasharray", "5,2");
-          }
-
-          if (prediction === "Actual") {
-            let g = svg
-              .append("g")
-              .attr("class", "prediction")
-              .append("path")
-              .datum(predictionData)
-              .attr("fill", "none")
-              .attr("stroke", color[prediction])
-              .attr("d", line);
-            g.attr("stroke-width", "1.5");
-
-            svg
-              .append("text")
-              .attr("class", "line-label")
-              .attr("text-anchor", "end")
-              .attr("x", x(new timeParse("2022")) + 29)
-              .attr("dx", "-1em")
-              .attr("y", isPopulation ? 40 : 165)
-              .text("Actual");
-          }
-
-          let lastEntry = predictionData[predictionData.length - 1]; //last piece of data to position text x and y
-
-          svg
-            .append("text")
-            .attr("class", "line-label")
-            .text(prediction)
-            .attr("x", x(lastEntry.YearParse) + 3)
-            .attr("y", y(lastEntry.value))
-            .attr("dominant-baseline", "middle")
-            .attr("fill", color[prediction]);
+          // Add label
+          g.append("text")
+            .text("Actual")
+            .attr("text-anchor", "end")
+            .attr("x", x(new timeParse("2022")) + 29)
+            .attr("dx", "-1em")
+            .attr("y", isPopulation ? 40 : 165);
         }
+
+        let lastEntry = predictionData[predictionData.length - 1]; //last piece of data to position text x and y
+
+        // Add label
+        g.append("text")
+          .text(prediction)
+          .attr("x", x(lastEntry.YearParse) + 3)
+          .attr("y", y(lastEntry.value))
+          .attr("dominant-baseline", "middle")
+          .attr("fill", color[prediction]);
+      }
+
+      // Manual legend
+      if (isPopulation) {
+        svg
+          .append("line")
+          .style("stroke", "black")
+          .attr("x1", width - margin.right * 6)
+          .attr("y1", margin.top - 5)
+          .attr("x2", width - margin.right * 6 + 20)
+          .attr("y2", margin.top - 5);
+
+        svg
+          .append("line")
+          .style("stroke", "black")
+          .attr("stroke-dasharray", "5,2")
+          .attr("x1", width - margin.right * 6)
+          .attr("y1", margin.top + 5)
+          .attr("x2", width - margin.right * 6 + 20)
+          .attr("y2", margin.top + 5);
+
+        svg
+          .append("text")
+          .attr("text-anchor", "start")
+          .attr("x", width - margin.right * 6 + 30)
+          .attr("y", margin.top - 3)
+          .attr("font-size", 12)
+          .text("Actual data");
+
+        svg
+          .append("text")
+          .attr("text-anchor", "start")
+          .attr("x", width - margin.right * 6 + 30)
+          .attr("y", margin.top + 8)
+          .attr("font-size", 12)
+          .text("Projected data released in past years");
       }
     }
   });

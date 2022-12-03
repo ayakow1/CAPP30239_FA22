@@ -18,7 +18,6 @@
     <section id="intro">
       <!-- Introduction Part -->
       <h1>Shrinking Population of Japan</h1>
-      <!-- TODO: Add articles, update css layout, consider accessibility, enable highligh in line-chart.  -->
       <p id="headline">December 5, 2022, by Ayako Watanabe <a href="https://github.com/ayakow1/CAPP30239_FA22/tree/main/final" class="fa fa-github" style="font-size:16px"></a></p>
       <p class="introduction">
          According to
@@ -223,6 +222,8 @@
     <!-- Conclusion Part -->
     <section id="conclusion">
       <h2 class="section-title">Sources</h2>
+        <p class="source">All the resources for this project can be found in the Github (<a href="https://github.com/ayakow1/CAPP30239_FA22/tree/main/data">data</a> / 
+            <a href="https://github.com/ayakow1/CAPP30239_FA22/tree/main/final">codes</a> )</p>
         <p class="source">Data: </p>
         <div>
             <ol>
@@ -319,8 +320,14 @@
 
       <h2 class="section-title2">Building Process</h2>
         <p class="building">
-           <b>Data collecting: </b> I could quickly identify the data sources based on my experience working 
-           in the Japanese government. However, since most of the data are available in .xlsx files, 
+           <b>Topic selection: </b> I decided to focus on population shrinkage in Japan because 
+           it was the most frequently discussed and critical issue while working in the Japanese government. 
+           Besides, I observed that despite the importance of topics, the problem was rarely discussed in 
+           international media with clear data visualization. Therefore, I constructed the story by introducing 
+           the latest population projection with supporting information to tell why Japan is at stake.
+           <br> 
+           <b>Data collecting: </b> I could quickly identify the data sources from the government's website based on my work experience. 
+           However, since most of the data are available in .xlsx files, 
            it took time to convert to Python-friendly format.
            <br>
            <b>Data cleaning: </b> I struggled to figure out what kind of data structure is useful in D3.js. 
@@ -347,9 +354,13 @@
            It was difficult to understand the CSS layout syntax and its hierarchical structure. 
            I used a sticky CSS layout with the scrollama library to align texts and graphs next to each other. 
            This way, the readers can focus on each chart and refer to the text. However, due to the limitation 
-           of the library, the chart might break if the users scroll down too fast.
+           of the library, the chart might break if the users scroll down too fast. 
+           I also put effort into making the chart consistent by using the same colors, fonts, and sizes. 
+           I used 12 colors from <a href="https://colorbrewer2.org/?type=qualitative&scheme=Paired&n=12">
+           Color Brewer
+           </a> to represent various categories in each chart. 
            <br>
-           <b>Limitation: </b> This project is mainly based on the latest data from 2017. 
+           <b>Limitations: </b> This project is mainly based on the latest data from 2017. 
            Therefore, I could not reflect the COVID-19 influence on the future population. 
            Since the pandemic is likely to deter people from having children, the following projection 
            is expected to have worse results. Another limitation is that I could not improve the web accessibility enough. 

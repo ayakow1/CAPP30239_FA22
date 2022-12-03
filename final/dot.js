@@ -3,11 +3,6 @@
 
 function create_dot() {
   d3.csv("../data/prediction_dot.csv").then((data) => {
-    for (let d of data) {
-      d.y_2020 = +d.y_2020;
-      d.y_2045 = +d.y_2045;
-    }
-
     let height = 300,
       width = 500,
       margin = { top: 25, right: 55, bottom: 55, left: 120 };
@@ -24,23 +19,16 @@ function create_dot() {
 
     const tooltip = d3.select(".svg-tooltip");
 
-    // Add X axis
+    for (let d of data) {
+      d.y_2020 = +d.y_2020;
+      d.y_2045 = +d.y_2045;
+    }
+
     const x = d3
       .scaleLinear()
       .domain([10000.0, 35000.0])
       .range([margin.right, width - margin.left]);
 
-    svg
-      .append("g")
-      .attr("transform", `translate(0, ${height - margin.bottom})`)
-      .call(
-        d3
-          .axisBottom(x)
-          .tickSizeOuter(5)
-          .tickValues([10000, 15000, 20000, 25000, 30000, 35000])
-      );
-
-    // Y axis
     const y = d3
       .scaleBand()
       .range([0, height - margin.bottom])
@@ -49,10 +37,20 @@ function create_dot() {
 
     svg
       .append("g")
+      .attr("transform", `translate(0, ${height - margin.bottom})`)
+      .call(
+        d3
+          .axisBottom(x)
+          .tickSizeOuter(5)
+          .tickValues([10000, 15000, 20000, 25000, 30000, 35000]) //show labels at specific values
+      );
+
+    svg
+      .append("g")
       .attr("transform", `translate(${margin.right},0)`)
       .call(d3.axisLeft(y).tickSize(0));
 
-    // Lines
+    // Create arrows
     svg
       .selectAll("myline")
       .data(data)
@@ -73,53 +71,8 @@ function create_dot() {
       .attr("stroke-width", "1px")
       .attr(
         "marker-end",
-        (d) => `url(${new URL(`#arrow-${d.ages}`, location)})`
+        (d) => `url(${new URL(`#arrow-${d.ages}`, location)})` //set where to end the arrow
       );
-
-    // Circles of variable 1
-    svg
-      .selectAll(".circle1")
-      .data(data)
-      .join("circle")
-      .attr("class", "circle1")
-      .attr("cx", function (d) {
-        return x(d.y_2020);
-      })
-      .attr("cy", function (d) {
-        return y(d.ages);
-      })
-      .attr("r", "6")
-      .style("fill", "#fb9a99");
-
-    //   // Circles of variable 2
-    //   svg
-    //     .selectAll("mycircle")
-    //     .data(data)
-    //     .join("circle")
-    //     .attr("cx", function (d) {
-    //       return x(d.y_2035);
-    //     })
-    //     .attr("cy", function (d) {
-    //       return y(d.ages);
-    //     })
-    //     .attr("r", "6")
-    //     .style("fill", "#fd8d3c")
-    //     .style("opacity", 0.5);
-
-    // Circles of variable 2
-    svg
-      .selectAll(".circle2")
-      .data(data)
-      .join("circle")
-      .attr("class", "circle2")
-      .attr("cx", function (d) {
-        return x(d.y_2045);
-      })
-      .attr("cy", function (d) {
-        return y(d.ages);
-      })
-      .attr("r", "6")
-      .style("fill", "#bd0026");
 
     svg
       .append("defs")
@@ -137,6 +90,36 @@ function create_dot() {
       .append("path")
       .attr("fill", "black")
       .attr("d", "M0,-5L10,0L0,5");
+
+    // Circles of variable 1
+    svg
+      .selectAll(".circle1")
+      .data(data)
+      .join("circle")
+      .attr("class", "circle1")
+      .attr("cx", function (d) {
+        return x(d.y_2020);
+      })
+      .attr("cy", function (d) {
+        return y(d.ages);
+      })
+      .attr("r", "6")
+      .style("fill", "#fb9a99");
+
+    // Circles of variable 2
+    svg
+      .selectAll(".circle2")
+      .data(data)
+      .join("circle")
+      .attr("class", "circle2")
+      .attr("cx", function (d) {
+        return x(d.y_2045);
+      })
+      .attr("cy", function (d) {
+        return y(d.ages);
+      })
+      .attr("r", "6")
+      .style("fill", "#bd0026");
 
     d3.selectAll(".circle1")
       .on("mouseover", function (event, d) {

@@ -1,3 +1,5 @@
+/* Maps for projections for each area */
+
 function create_map() {
   const height = 500,
     width = 500;
@@ -23,6 +25,7 @@ function create_map() {
       )
       .attr("class", "chart-title");
 
+    // Add legend
     d3.select(".map")
       .append("div")
       .attr("class", "legend")
@@ -34,6 +37,7 @@ function create_map() {
         })
       );
 
+    // Build each chart
     d3.select(".map").append("div").attr("class", "row1");
     createChart(data, "2025");
     createChart(data, "2035");
@@ -47,7 +51,7 @@ function create_map() {
 
     for (let d of data) {
       d.rate = +d.rate;
-      //making a lookup table from the array (unemployment data)
+      //making a lookup table from the array
       dataById[d.id] = d;
     }
 

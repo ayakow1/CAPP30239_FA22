@@ -30,14 +30,15 @@ function handleResize() {
 
 // scrollama event handlers
 function handleStepEnter(response) {
-  // response = { element, direction, index }
-
+  // remove elements from previous selected chart
   while (container.firstChild) {
     container.removeChild(container.firstChild);
   }
 
+  // make sure the tooltip is hidden
   d3.select(".svg-tooltip").style("visibility", "hidden");
 
+  // call function and insert svg based on response.index
   if (response.index === 0) {
     create_map();
   } else if (response.index == 1) {
@@ -58,13 +59,13 @@ function handleStepEnter(response) {
 function init() {
   handleResize();
 
+  // Setup tooltip
   d3.select("body")
     .append("div")
     .attr("class", "svg-tooltip")
     .style("position", "absolute")
     .style("visibility", "hidden");
 
-  //   create_map();
   // 3. bind scrollama event handlers (this can be chained like below)
   scroller
     .setup({

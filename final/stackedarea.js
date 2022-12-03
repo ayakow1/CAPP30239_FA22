@@ -16,6 +16,7 @@ var actions = [
   "Work",
 ];
 
+// For annotation
 var actions_fortooltip = {
   Child_care: "Child care",
   Household_activities: "Household activities",
@@ -64,6 +65,7 @@ function create_stackedarea() {
       )
       .attr("class", "chart-title");
 
+    // Build radio buttons
     document.getElementById("area-container").innerHTML += `<div id="radio">
                             <p>
                             <div>
@@ -85,13 +87,17 @@ function create_stackedarea() {
                             </p>
                         </div>`;
 
+    // Manual legend
     const legend2 = d3
       .select("#area-container")
       .append("svg")
       .attr("class", "legend2")
       .attr("viewBox", [0, 0, 500, 30]);
 
-    // manual legend
+    d3.select("#area-container").append("div").attr("class", "row2");
+
+    const timeParse = d3.timeParse("%H:%M");
+
     let index = 0;
     let cumulate = 60;
     let gapcal = function (index, cumulate) {
@@ -132,10 +138,7 @@ function create_stackedarea() {
       index++;
     }
 
-    d3.select("#area-container").append("div").attr("class", "row2");
-
-    const timeParse = d3.timeParse("%H:%M");
-
+    // Build charts
     createChart2("wife");
     createChart2("husband");
 
@@ -179,6 +182,7 @@ function create_stackedarea() {
           d3.axisBottom(x).tickSizeOuter(5).tickFormat(d3.timeFormat("%I %p"))
         );
 
+      // X-axis label
       svg
         .append("text")
         .attr("class", "x-label")
@@ -189,6 +193,7 @@ function create_stackedarea() {
         .attr("dy", "-0.5em")
         .text("Time");
 
+      // Y-axis label
       svg
         .append("text")
         .attr("class", "y-label")
@@ -203,6 +208,7 @@ function create_stackedarea() {
         .append("g")
         .attr("class", gender == "wife" ? "areaGroups1" : "areaGroups2");
 
+      // Call function based on value selected in the radio buttons
       updateChart("Both working", "-6");
 
       // event listener

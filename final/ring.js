@@ -10,13 +10,15 @@ https: function create_ring() {
   // The radius of the pieplot is half the width or half the height (smallest one). I subtract a bit of margin.
   const radius = Math.min(width, height) / 2 - margin;
 
+  // Manual added data equivalent to ../data/foreigners.json
+  const data = { Japanese: 121541155, Foreigners: 2402460, Uncertain: 2202484 };
+
   const color = d3
     .scaleOrdinal()
     .domain(["Japanese", " Foreigners", "Uncertain"])
     .range(["#fb9a99", "#e31a1c", "#ffff99"]);
 
-  const data = { Japanese: 121541155, Foreigners: 2402460, Uncertain: 2202484 };
-
+  // Calculate total population to calculate proportion later
   let sum = 0;
 
   for (const value of Object.values(data)) {
@@ -30,7 +32,6 @@ https: function create_ring() {
     )
     .attr("class", "chart-title");
 
-  // append the svg object to the div called 'my_dataviz'
   const svg = d3
     .select("#chart-container")
     .append("svg")
@@ -124,6 +125,7 @@ https: function create_ring() {
     .attr("font-size", "14px")
     .text((d) => d);
 
+  // Add text in the middle of ring chart
   svg
     .append("foreignObject") //put html annotation (more flexible than text)
     .attr("id", "annotation2")
@@ -131,7 +133,7 @@ https: function create_ring() {
     .attr("y", -32)
     .attr("font-weight", "bold")
     .attr("text-anchor", "middle")
-    .style("font-size", 20)
+    .style("font-size", 18)
     .attr("alignment-baseline", "middle")
     .attr("width", 150)
     .attr("height", 55)

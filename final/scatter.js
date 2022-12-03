@@ -13,17 +13,18 @@ function create_scatter() {
       )
       .attr("class", "chart-title");
 
+    const tooltip = d3.select(".svg-tooltip");
+
     const svg = d3
       .select("#chart-container")
       .append("svg")
       .attr("class", "scatter")
       .attr("viewBox", [0, 0, width, height]);
+
     for (let d of data) {
       d.price = +d.price;
       d.fertility = +d.fertility;
     }
-
-    const tooltip = d3.select(".svg-tooltip");
 
     let x = d3
       .scaleLinear()
@@ -39,6 +40,7 @@ function create_scatter() {
 
     let keys = ["Tokyo", "Nagoya", "Osaka", "Regions"];
 
+    // Set symbols for each key
     let shape = d3
       .scaleOrdinal()
       .domain(keys)
@@ -49,6 +51,7 @@ function create_scatter() {
         d3.symbolCircle,
       ]);
 
+    // Set colors for each color
     let color = d3
       .scaleOrdinal()
       .domain(keys)
@@ -66,6 +69,7 @@ function create_scatter() {
       .attr("class", "y-axis")
       .call(d3.axisLeft(y).tickSize(-width + margin.left + margin.right));
 
+    // Add data points
     svg
       .append("g")
       .selectAll(".symbols")
@@ -85,6 +89,7 @@ function create_scatter() {
       .attr("fill", (d) => color(d.Location))
       .attr("transform", (d) => `translate(${x(d.price)},${y(d.fertility)})`);
 
+    // Highlight and tooltip
     var previous;
     d3.selectAll(".symbols")
       .on("mouseover", function (event, d) {
@@ -106,7 +111,7 @@ function create_scatter() {
         tooltip.style("visibility", "hidden");
       });
 
-    // Add one dot in the legend for each name.
+    // Manual legend for symbols
     let size = 45;
     svg
       .selectAll("mydots")
@@ -129,7 +134,7 @@ function create_scatter() {
         return color(d);
       });
 
-    // Add one dot in the legend for each name.
+    // Manual legend for name
     svg
       .selectAll("mylabels")
       .data(keys)
@@ -144,6 +149,7 @@ function create_scatter() {
       .attr("text-anchor", "left")
       .style("alignment-baseline", "middle");
 
+    // Axis label
     svg
       .append("text")
       .attr("class", "x-label")
@@ -164,6 +170,7 @@ function create_scatter() {
       .attr("transform", "rotate(-90)")
       .text("Fertility Rate (TFR)");
 
+    // Manual line for average (xaxis)
     svg
       .append("line")
       .attr("x1", x(100))
@@ -185,6 +192,7 @@ function create_scatter() {
       .text("National Average Price")
       .style("fill", "red");
 
+    // Manual line for average (yaxis)
     svg
       .append("line")
       .attr("x1", margin.left)
