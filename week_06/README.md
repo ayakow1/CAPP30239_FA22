@@ -1,6 +1,6 @@
 # Week 6
 
-This week, we worked on D3.js to create histogram and scatter plots.
+This week, we worked on D3.js to create histogram, ring, stacked-bar, and scatter(symbol) plots.
 
 ## Class exercise
 

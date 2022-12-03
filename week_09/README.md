@@ -1,14 +1,15 @@
-## Hierarchy
+# Week 9
 
-### See also
-- <a href="https://observablehq.com/@d3/treemap">Observable Treemap</a>
+This week, we worked on D3.js to cluster, hierarchy, treemap, and network. 
 
-### Documentation
-- <a href="https://observablehq.com/@d3/treemap">d3-hierarchy > d3.treemap()</a> 
+## Class exercise
 
-## D3 Force
-- <a href="https://www.d3indepth.com/force-layout/">D3 Force Layout</a>
-- <a href="https://observablehq.com/@ben-tanen/a-tutorial-to-using-d3-force-from-someone-who-just-learned-ho">A Tutorial on D3 force from someone who just learned how to use it</a>
-- <a href="https://www.kaggle.com/code/minc33/visualizing-high-dimensional-clusters/notebook">Visualizing high dimensional clusters</a>
-- <a href="https://d3-force-collection.herokuapp.com/">D3 force collection</a>
-- <a href="https://observablehq.com/@d3/collision-detection/2?collection=@d3/d3-force">Collision detection</a>
+- [`cluster-single.html/js`](https://ayakow1.github.io/CAPP30239_FA22/week_09/cluster/cluster-single.html): example of cluster diagram
+- [`cluster.html/js`](https://ayakow1.github.io/CAPP30239_FA22/week_09/cluster/cluster.html): example of multi cluster diagram
+- [`partition.html/js`](https://ayakow1.github.io/CAPP30239_FA22/week_09/hierarchy/partition.html): example of partition diagram
+- [`simple-tree.html/js`](https://ayakow1.github.io/CAPP30239_FA22/week_09/hierarchy/simple-tree.html): example of tree diagram
+- [`sunburst.html/js`](https://ayakow1.github.io/CAPP30239_FA22/week_09/hierarchy/sunburst.html): example of sunburst diagram
+- [`treemap.html/js`](https://ayakow1.github.io/CAPP30239_FA22/week_09/treemap/treemap.html): example of zoomable treemap
+- [`m06.html/js`](https://ayakow1.github.io/CAPP30239_FA22/week_09/network/m06.html): example of network diagram
+- [`network.html/js`](https://ayakow1.github.io/CAPP30239_FA22/week_09/network/network.html): example of network diagram with images
+- [`review`](https://ayakow1.github.io/CAPP30239_FA22/week_09/review/index.html): review of class
