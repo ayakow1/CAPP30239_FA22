@@ -1,14 +1,9 @@
-## Flow/Relationships
+# Week 8
 
-### Sankey
-- <a href="https://github.com/d3/d3-sankey">D3 Sankey Module</a>
-- <a href="https://observablehq.com/@didoesdigital/18-july-2020-about-sankey-alluvial-parallel-sets-and-parall">Sankey, Alluvial, Parallel Sets</a>
-- <a href="https://datavizproject.com/data-type/sankey-diagram/">Sankey Diagrams</a>
-- <a href="https://datavizcatalogue.com/blog/sankey-diagrams-parallel-sets-alluvial-diagrams-whats-the-difference/#:~:text=However%2C%20the%20main%20difference%20between,their%20line%2Dsets%2Fnodes">Sankey, Alluvial, Parallel: What's the Difference?</a>
+This week, we worked on D3.js to sankey and chords. 
 
-### Chords
-- <a href="https://www.d3indepth.com/chords/">D3 in Depth: Chords</a>
-- <a href="https://github.com/d3/d3-chord">D3 Chord</a>
+## Class exercise
 
-### Observable Examples
-- <a href="https://observablehq.com/@d3/parallel-coordinates">Parallel Coordinates</a>
+- [`parallel-set.html/js`](https://ayakow1.github.io/CAPP30239_FA22/week_08/parallel-set/parallel-set.html): parallel set of relationship between gender and degrees
+- [`chord.html/js`](https://ayakow1.github.io/CAPP30239_FA22/week_08/chord/chord.html): chord diagram of 
+relationship between gender and degrees
