@@ -11,7 +11,12 @@ Please visit [here](https://github.com/ayakow1/CAPP30239_FA22/tree/main/data) to
 ## Codes: 
 - `index.html`: main html file for the website. 
 - `style.css`: main css file for the website styles. 
-- `script.js`: wrapping js file for creating svg and scrolling interaction. 
-- `map.js`: js file for building choropleth map. 
-- `d3-color-.js`: copied from [Observables](https://observablehq.com/@d3/color-legend)
-- 
+- `script.js`: wrapping javascript file for creating svg objects and scrolling interaction. 
+- `map.js`: javascript file for building choropleth map. 
+- `d3-color-.js`: copied from [Observables](https://observablehq.com/@d3/color-legend) and used in `map.js`. 
+- `dot.js`: javascript file for building dot chart. 
+- `ring.js`: javascript file for building ring chart.
+- `scatter.js`: javascript file for building scatter plot. 
+- `area.js`: javascript file for building area chart. 
+- `stackedarea.js`: javascript file for building stacked-area chart. 
+- `line.js`: javascript file for building multiple-line chart. 
