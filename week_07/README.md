@@ -13,3 +13,4 @@ This week, we worked on D3.js to create maps.
 - [`japan.html/js`](https://ayakow1.github.io/CAPP30239_FA22/week_07/maps2/japan.html): example map of Arizona
 - [`world.html/js`](https://ayakow1.github.io/CAPP30239_FA22/week_07/maps2/world.html): example of world map
 - [`leaflet-example.html/js`](https://ayakow1.github.io/CAPP30239_FA22/week_07/maps2/leaflet-example.html): example of Leaflet
+- [`transforming-data`](https://ayakow1.github.io/CAPP30239_FA22/week_07/transforming-data/index.html): example of ["Build Three Charts Assignment"](https://github.com/ayakow1/CAPP30239_FA22/tree/main/week_06#build-three-charts-assignment)
