@@ -1,4 +1,4 @@
-# Week 6
+# Week 7
 
 This week, we worked on D3.js to create maps. 
 
