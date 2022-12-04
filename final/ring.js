@@ -133,7 +133,7 @@ https: function create_ring() {
     .attr("y", -32)
     .attr("font-weight", "bold")
     .attr("text-anchor", "middle")
-    .style("font-size", 18)
+    .style("font-size", 16)
     .attr("alignment-baseline", "middle")
     .attr("width", 150)
     .attr("height", 55)
